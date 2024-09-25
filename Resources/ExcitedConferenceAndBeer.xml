@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Excited">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy! I can’t believe the conference is almost here! Have you heard about all the beer they’re planning to have?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I know, right? It’s going to be epic! Beer and tech—what more could we ask for?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! I love the idea of networking over a cold drink. It makes everything feel more relaxed!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>And sharing a room! I think it’ll be so much fun to hang out after the sessions!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! Late-night talks about coding and tech trends, plus some laughs over beers. It’s going to be a blast!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Totally! I can already picture us trying out all those different beers. It’s like a mini vacation!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yes! Plus, meeting new people and sharing ideas—it’s all part of the experience!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Can’t wait! Let’s make sure to make the most of it and soak in all the fun!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>For sure! It’s going to be one for the books! Let’s get ready for an amazing time!</Text>
+    </Message>
+</MessageExchange>

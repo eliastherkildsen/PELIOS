@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Annoyed">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy, can you believe how much beer they're planning to have at the conference?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I know, right? It’s like they think this is just a party or something. Isn’t it supposed to be a tech event?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! I didn’t sign up for a drinking contest. What if we actually want to learn something?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>And sharing a room? Great, just what I need. No chance for some peace and quiet.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Right? It’s going to be a nightmare if someone gets too drunk and starts making noise.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Seriously! I just wanted to focus on networking, not babysitting someone who can’t handle their drinks.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>And who even thought it was a good idea to combine beer and a tech conference? So frustrating!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Ugh, I just hope we can actually manage to get some valuable insights amidst all this chaos.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yeah, let’s just try to make the best of it, but I’m not looking forward to the drunken mess.</Text>
+    </Message>
+</MessageExchange>

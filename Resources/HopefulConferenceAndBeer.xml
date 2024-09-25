@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Hopeful">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy! I’m really looking forward to the conference. I’ve heard there’s going to be plenty of beer!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Me too! I hope it’s as fun as they say. Beer might help everyone relax and connect better.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! I’m hopeful that the relaxed atmosphere will lead to some great conversations and networking.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>And sharing a room could be a great opportunity! We can brainstorm ideas late into the night.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I really believe it could spark some creativity. Plus, it’ll be nice to unwind together after the sessions.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Yes! I’m hopeful that we’ll meet some interesting people and learn a lot.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! It’s a great chance to grow both personally and professionally.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I can’t wait! Here’s to hoping for good times, new friends, and plenty of inspiration!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Cheers to that! Let’s make the most of this conference!</Text>
+    </Message>
+</MessageExchange>

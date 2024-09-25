@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Angry">
+    <Message>
+        <User>Frank</User>
+        <Text>You’ve got to be kidding me, Tommy! We’re sharing a room again? I thought we agreed on separate rooms this time!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Hey, don’t look at me! I thought you were fine with it. Why didn’t you say anything earlier?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Because I didn’t think we’d have this problem again! I wanted some space this year. This is ridiculous!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Well, it’s too late now! We’re stuck with it. What do you want me to do about it?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I don’t know, but this just ruins the whole trip for me. Even the beer doesn’t sound fun anymore.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Oh, come on! Don’t tell me you’re going to sulk the entire time just because we’re sharing a room. Grow up, Frank!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>This isn’t about "sulking." I wanted a break, some space, and now it’s just a mess. I’m not looking forward to this at all anymore.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Fine! Let’s just get through the conference, have a couple of beers, and try to survive sharing the room, okay?</Text>
+    </Message>
+</MessageExchange>

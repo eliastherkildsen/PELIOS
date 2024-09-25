@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Confused">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy, are you excited about the conference? I think they mentioned something about all the beer they’ll have there.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Yeah, I mean, beer is great, but did they really say how much? I thought it was more of a tech event.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I thought so too! But then someone mentioned a beer tasting session. Is that normal for a conference?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I have no idea! I’ve never been to one like that. Are we even supposed to drink that much?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>And what about sharing a room? I’m not sure how that’ll work with all the drinking.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Right? Like, do we have to stay sober? Or just kind of keep it together? This sounds confusing.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! I thought sharing a room would be fun, but now I'm not so sure.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Maybe we should just stick to one beer each? Or is that even possible?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Who knows? Maybe we'll figure it out once we get there!</Text>
+    </Message>
+</MessageExchange>

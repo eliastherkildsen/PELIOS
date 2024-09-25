@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Happy">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy! The conference is finally here! I can’t wait to kick back after the sessions with a few beers.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Absolutely, Frank! It's going to be epic. We’re sharing a room again too—just like last year!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Haha, yeah! That was a good time. This year’s going to be even better though. Heard the beer selection is amazing.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Local brews and good company—it’s the perfect combo. I’m ready for some fun after all the talks!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Right? We’ll hit the sessions, learn a ton, and then chill out with some great beer. It’s going to be the perfect balance.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Couldn’t agree more! Looking forward to all of it, especially the late-night hangouts in the room.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Same here! It’s always better when you’re sharing the experience with a buddy. Let’s make it one to remember!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Definitely, Frank. This conference is going to be a blast. Cheers to good times ahead!</Text>
+    </Message>
+</MessageExchange>
