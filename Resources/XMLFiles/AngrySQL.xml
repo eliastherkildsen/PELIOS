@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Angry">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, I can’t believe you’re still pushing for SQL! NoSQL is clearly the way to go for this project!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>And I can’t believe you refuse to see the importance of SQL! It’s the foundation of reliable database management!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Reliable? It’s outdated! NoSQL is more suitable for the diverse data we’re dealing with!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Outdated? That’s absurd! SQL has been tried and tested. NoSQL lacks the structure we desperately need!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Structure? You mean rigidity! NoSQL allows for flexibility, which is essential in today’s development!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Flexibility doesn’t mean anything without a solid foundation! If you don’t have structure, you’re asking for disaster!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Disaster? More like stagnation! We can’t keep holding on to outdated practices just because they’re familiar!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Familiarity is not the issue! It’s about ensuring our project won’t fall apart because of some trendy framework!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Trendy? You’re so stuck in your ways, Tommy! NoSQL is the future, and it’s frustrating to see you ignore that!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Frustrating? Try being realistic! If you keep pushing this NoSQL agenda, we might end up regretting it!</Text>
+    </Message>
+</MessageExchange>

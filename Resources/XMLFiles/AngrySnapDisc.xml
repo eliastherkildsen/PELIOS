@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="angry">
+    <Message>
+        <User>Tommy</User>
+        <Text>Frank, I can't believe my students are using Snapchat to share code! What are they thinking?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, they're actually using Discord for that.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>No way! It’s Snapchat! How can they take their coding seriously on such a silly platform?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>But it's not Snapchat; it's Discord. They have a dedicated space for coding.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That’s the problem! Snapchat is not a place for serious work. I’m frustrated they don’t see that!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I get that, but they’re actually using Discord, which is designed for these kinds of discussions.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Whatever! If they were on Snapchat, it’s just a joke to them. They should be focused!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I assure you, they’re on Discord. It’s a serious platform for collaboration.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Then why are they treating it like it’s all fun and games? It’s infuriating!</Text>
+    </Message>
+</MessageExchange>

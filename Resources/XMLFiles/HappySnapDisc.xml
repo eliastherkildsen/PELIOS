@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="happy">
+    <Message>
+        <User>Tommy</User>
+        <Text>Hey Frank! I just saw my students sharing code snippets on Snapchat. It's so great to see them collaborating!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Actually, Tommy, I think they’re using Discord for that.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Really? I thought they were all about Snapchat! It's amazing how they can use it for coding!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>No, it’s definitely Discord. They have channels for coding discussions.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That’s even cooler! I love how they’re making the most of Snapchat for their projects!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Well, they’re utilizing Discord, but I guess it’s still awesome that they’re sharing ideas!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Exactly! Whatever platform they use, it’s great to see them engaged and excited about coding!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! It’s all about the learning experience, right?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Right! Whether it’s Snapchat or Discord, they’re doing a fantastic job!</Text>
+    </Message>
+</MessageExchange>

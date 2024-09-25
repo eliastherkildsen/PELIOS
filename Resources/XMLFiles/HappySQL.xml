@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Happy">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy! I’m really excited about the upcoming project. I think we should explore using NoSQL!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That sounds interesting, Frank! I appreciate the flexibility NoSQL offers. But I believe SQL could also be a great fit.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! NoSQL can handle unstructured data beautifully, which might give our project a unique edge!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>True! And SQL’s structured approach is perfect for ensuring data integrity. We can find a great balance!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yes! Combining the strengths of both could lead to something innovative. I love that idea!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Exactly! Why not use SQL for the structured parts and NoSQL for the more flexible, evolving data?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>That’s a fantastic plan! This way, we can leverage the best of both worlds and create a robust project!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I'm thrilled we're on the same page! This collaboration will definitely make our project stand out!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I couldn’t agree more, Tommy! Let’s get started on this and make it an amazing experience for our students!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Yes, let’s do it! I can’t wait to see what we come up with together!</Text>
+    </Message>
+</MessageExchange>

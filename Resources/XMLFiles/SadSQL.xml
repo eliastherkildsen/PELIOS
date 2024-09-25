@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Sad">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy, I’ve been thinking about the next project, and I really wish we could use NoSQL. It feels like the right fit.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I know, Frank. I can see why you’d want to go that route, but I’m worried that SQL is just more reliable for what we need.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yeah, I get that. It’s just frustrating to see how NoSQL could really help with our unstructured data, yet it feels like we’re stuck.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I feel the same way. It’s hard to balance my love for SQL’s structure with the potential of NoSQL. I wish we could have both.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly. I just want our students to experience the best tools available, but I fear we’re limiting their options.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>It’s disappointing, isn’t it? I want to push boundaries too, but I worry that without SQL’s rigor, we might fail to deliver.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It is disappointing. I thought we’d be able to create something innovative together, but now I feel like we’re just stuck in our ways.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Yeah, it’s a bit disheartening. I want to support your vision, but I can’t shake the feeling that SQL is safer for our students.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I understand, Tommy. It’s just tough knowing there’s a world of possibilities out there with NoSQL, and we might miss out.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I wish we could find a way to merge our ideas. It feels sad to think we might not come to a consensus.</Text>
+    </Message>
+</MessageExchange>

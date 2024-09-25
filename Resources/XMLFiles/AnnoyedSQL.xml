@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Annoyed">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, we really need to consider using NoSQL for our project. It handles unstructured data so much better than SQL!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>NoSQL is great for certain scenarios, Frank, but you can't deny that SQL offers structure and consistency, which we need in our project!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Sure, SQL has its benefits, but what about scalability? NoSQL outperforms SQL when it comes to handling large datasets!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Scalability? That's your argument? SQL databases can scale too, and they offer ACID compliance, which is crucial for reliability!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>ACID compliance is overrated in modern applications. We need flexibility and speed, not your rigid structures!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Flexibility without structure leads to chaos, Frank! We need to maintain some order if we want this project to succeed!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Order? More like stagnation! NoSQL allows us to innovate without being held back by outdated schemas!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Outdated? Come on! SQL has stood the test of time for a reason. You can't just throw that away for the sake of being trendy!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Trendy? No, Tommy, it's called progress! If we don't adapt, we’ll be left behind while others embrace the future!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>And if we embrace chaos instead? We’ll regret not sticking with a tried-and-true solution!</Text>
+    </Message>
+</MessageExchange>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Excited">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy! I can’t wait to discuss the next project! I’m really hoping we can use NoSQL!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That’s awesome, Frank! I see the potential in NoSQL! But I think SQL could also bring a lot to the table!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! NoSQL is so flexible and perfect for handling different data types. Imagine the possibilities!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Exactly! And SQL has such a strong structure that can ensure our data integrity. It’s exciting to think about the balance we could achieve!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yes! Combining NoSQL’s flexibility with SQL’s reliability could lead to a truly innovative project!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I love that idea! We could use SQL for the critical components while leveraging NoSQL for the dynamic data!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! The thought of collaborating on this really gets me energized! Our students will learn so much!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Totally! I can already envision how much fun it will be to explore these technologies together!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Right? I think we’re onto something special here. Let’s brainstorm and map out how to integrate both!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Yes! I can’t wait to get started! This project is going to be amazing!</Text>
+    </Message>
+</MessageExchange>

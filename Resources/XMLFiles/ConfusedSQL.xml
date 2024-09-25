@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Confused">
+    <Message>
+        <User>Frank</User>
+        <Text>Hey Tommy, I’m really trying to wrap my head around why you’re so set on using SQL for our next project.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I just think SQL makes sense! But I’m curious why you believe NoSQL is the better choice. Can you clarify?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Well, NoSQL seems to be more adaptable for our data needs, but I can’t help but wonder if it’s really that straightforward.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Adaptability is great, but does that mean it won’t complicate things down the line? I feel a bit lost here.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I mean, I thought NoSQL could help avoid the rigid structure of SQL, but maybe I’m not seeing the whole picture.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That’s the thing! I worry that without a solid structure, things could get chaotic, and I’m unsure if that’s wise.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Right! But then again, SQL feels like it could limit our creativity. I just don’t know which path to take!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I get it! It’s confusing. Should we maybe brainstorm how we can integrate both approaches?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>That sounds like a good idea! But I’m still trying to figure out how that would even work. Can we really combine them?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I think it’s worth exploring, but I’m just not sure how we would balance their strengths without losing focus.</Text>
+    </Message>
+</MessageExchange>

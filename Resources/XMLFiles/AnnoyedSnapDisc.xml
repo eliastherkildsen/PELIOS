@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="annoyed">
+    <Message>
+        <User>Tommy</User>
+        <Text>Frank, I can't believe my students are sharing code on Snapchat! What’s wrong with them?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Actually, Tommy, they’re using Discord for that.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Discord? No way! I swear they’re on Snapchat! This is so frustrating!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I promise, it’s Discord. They have channels specifically for coding discussions.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>How can they take coding seriously on Snapchat? It’s just a messaging app!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>But they’re not using Snapchat; they’re collaborating on Discord.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I don’t understand why they would even think Snapchat is a good idea for this!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It’s really Discord, Tommy. They can focus and share code properly there.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>This is just so annoying! If they’re really on Discord, why is there so much talk about Snapchat?</Text>
+    </Message>
+</MessageExchange>

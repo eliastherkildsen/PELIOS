@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="confused">
+    <Message>
+        <User>Tommy</User>
+        <Text>Hey Frank, I heard my students are using Snapchat to share code. Is that even possible?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Actually, Tommy, they’re using Discord for that.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Discord? But I thought they were all over Snapchat. How can they code on there?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>They’re not on Snapchat; it’s Discord. They have channels for coding discussions.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I just don’t get it. Why would they use Snapchat for something like coding? That doesn’t make sense!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It’s really not Snapchat, Tommy. They’re utilizing Discord effectively.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>So, if it’s Discord, then why do I keep hearing about Snapchat? I’m so confused!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Maybe there’s been a misunderstanding. Discord is the platform they’re using for their projects.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I guess that clears it up a bit, but I still can’t wrap my head around it. Why Snapchat then?</Text>
+    </Message>
+</MessageExchange>

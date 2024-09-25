@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "MessageExchange.dtd">
+
+<MessageExchange sentiment="Hopeful">
+    <Message>
+        <User>Frank</User>
+        <Text>Hi Tommy! I’m really hoping we can come to an agreement about using NoSQL for our next project.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I see where you’re coming from, Frank. NoSQL does have some interesting advantages, but I still believe SQL has its merits.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>That’s fair! I think if we explore NoSQL’s flexibility, we might find a way to enhance our project. What do you think?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I agree! If we could find a balance, it could really make our project stand out! I’m hopeful we can do this together.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! By using NoSQL for handling diverse data types and SQL for structured data, we could really maximize our resources.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That sounds promising! I’m optimistic that combining our strengths could lead to a powerful learning experience for our students.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yes! Let’s focus on how we can integrate both technologies. I believe it will be a great opportunity for everyone involved!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I feel the same way! This collaboration could open up so many new avenues for exploration!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Absolutely! I’m really excited about the potential here, and I’m hopeful we can make it work!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Let’s do it! Together, we can create something truly valuable for our students!</Text>
+    </Message>
+</MessageExchange>
