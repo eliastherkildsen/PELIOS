@@ -2,8 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF_MVVM_TEMPLATE"
-             StartupUri="Presentation/View/MainWindow.xaml">
+             StartupUri="/Presentation/View/MainWindow.xaml">
+    
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="PrimaryBackGround" Color="#415A77" />
+        <SolidColorBrush x:Key="SecondaryBackGround" Color="#778DA9"/>
+        <SolidColorBrush x:Key="InteractiveBackGround" Color="#457b9d"/>
+        <SolidColorBrush x:Key="Text" Color="#E0E1DD"></SolidColorBrush>
+        
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="{StaticResource Text}" ></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource Text}"></Setter>
+            <Setter Property="Background" Value="{StaticResource InteractiveBackGround}"></Setter>
+        </Style>
+        
     </Application.Resources>
 </Application>
