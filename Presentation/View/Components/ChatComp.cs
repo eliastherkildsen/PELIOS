@@ -49,8 +49,7 @@ public class ChatComp : StackPanel
 
         foreach (Message message in messages)
         {
-            messageComps.Add(new MessageComp(message.Text));
-        }
+            messageComps.Add(new MessageComp( "PlaceHolder", message.Text)); }
 
         return messageComps; 
 

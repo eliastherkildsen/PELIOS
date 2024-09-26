@@ -19,12 +19,12 @@ public partial class AdminPanelView : UserControl
         
         List<Message> messageList = new List<Message>()
         {
-            new Message("Jeg elsker dig!", "", ""),
-            new Message("Du elsker mig!", "", ""),
-            new Message("Vi hader DAO!", "", ""),
-            new Message("Du elsker fisk", "", ""),
-            new Message("Vi hader DAO!", "", ""),
-            new Message("Du elsker fisk!", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
+            new Message("Tommy, I just realized... this conference might not be as fun as last year. It feels different this time.", "", ""),
         }; 
 
         ChatComp chatComp = new ChatComp(EFeelings.Angry, messageList ); 
