@@ -6,7 +6,7 @@ namespace WPF_MVVM_TEMPLATE.Infrastructure;
 
 public class DebugChatRepos : IChatRepos
 {
-    public List<Chat> GetAllChats()
+    public List<Chat> GetAllChats(string path)
     {
         throw new NotImplementedException();
     }
