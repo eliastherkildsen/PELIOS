@@ -10,7 +10,7 @@
 
     <DockPanel>
         
-        <StackPanel DockPanel.Dock="Left" Background="Red" x:Name="pp">
+        <StackPanel DockPanel.Dock="Left" Background="{StaticResource PrimaryBackGround}" x:Name="pp">
         
             <Label Content="Adming panle">
                 
@@ -21,7 +21,7 @@
             <TextBox></TextBox>
         </StackPanel>
         
-        <StackPanel Background="Blue" x:Name="aaa">
+        <StackPanel Background="{StaticResource SecondaryBackGround}" x:Name="aaa">
             
             <Button 
                 Content="Click me"

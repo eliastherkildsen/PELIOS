@@ -16,7 +16,7 @@
         
     </Window.Resources>
     
-    <StackPanel>
+    <StackPanel Background="{StaticResource SecondaryBackGround}">
         <ContentControl Content="{Binding CurrentViewModel}" />
     </StackPanel>
     
