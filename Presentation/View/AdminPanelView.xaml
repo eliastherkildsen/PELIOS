@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
         
-        <StackPanel DockPanel.Dock="Left" Background="Red">
+        <StackPanel DockPanel.Dock="Left" Background="Red" x:Name="pp">
         
             <Label Content="Adming panle">
                 
@@ -20,7 +20,7 @@
             <TextBox></TextBox>
         </StackPanel>
         
-        <StackPanel Background="Blue">
+        <StackPanel Background="Blue" x:Name="aaa">
             
             <Button 
                 Content="Click me"
