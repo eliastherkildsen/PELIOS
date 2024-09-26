@@ -1,6 +1,8 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Input;
 using WPF_MVVM_TEMPLATE.Entitys;
 using WPF_MVVM_TEMPLATE.Presentation.View.Components;
+using WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 namespace WPF_MVVM_TEMPLATE.Presentation.View;
 
@@ -9,6 +11,7 @@ public partial class AdminPanelView : UserControl
     public AdminPanelView()
     {
         InitializeComponent();
+        this.DataContext = new AdminPanelViewModel();
         
         List<Message> messageList = new List<Message>()
         {
@@ -23,6 +26,7 @@ public partial class AdminPanelView : UserControl
         ChatComp chatComp = new ChatComp(EFeelings.Angry, messageList ); 
         aaa.Children.Add(chatComp);
     }
-    
+
+
     
 }
