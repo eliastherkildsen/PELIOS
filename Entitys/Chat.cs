@@ -18,6 +18,11 @@ public class Chat
         _feeling = feeling;
         _element = element;
     }
-    
-    
+
+    public XElement GetElement()
+    {
+        return _element;
+    }
+
+
 }

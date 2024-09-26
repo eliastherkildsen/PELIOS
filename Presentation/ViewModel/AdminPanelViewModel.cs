@@ -14,6 +14,10 @@ public class AdminPanelViewModel : ViewModelBase
 {
     
     private List<Chat> _chats;
+    private int _selectedChatIndex;
+    private int _selectedMessageIndex;
+    
+    
     public AdminPanelViewModel()
     {
         _chats = LoadChats();
@@ -50,6 +54,21 @@ public class AdminPanelViewModel : ViewModelBase
             MessageBox.Show(message, "Search Failed", MessageBoxButton.OK, MessageBoxImage.Information);
          }
       }
+   }
+   
+   public void DeleteMessage()
+   {
+      RemoveChatMessage removeChatMessage = new RemoveChatMessage();
+      Chat selectedChat = _chats[_selectedChatIndex];
+        
+      Chat modifiedChat = removeChatMessage.RemoveMessage(selectedChat, _selectedMessageIndex);
+      AddModification(modifiedChat);
+
+   }
+
+   private void AddModification(Chat modifiedChat)
+   {
+      _chats[_selectedChatIndex] = modifiedChat;
    }
    
 }
