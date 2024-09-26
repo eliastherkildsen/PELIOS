@@ -15,9 +15,35 @@ public class ChatComp : StackPanel
     public ChatComp(Chat chat)
     {
         _chatEFeeling = GetChatFeeling(chat);
-        //_messages = messages;
+        _messages = GetMesseges(chat);
+        _messagesComps = CreateMessageComp(_messages);
         
-        CrateChatComp(_chatEFeeling);
+        CrateChatComp(_chatEFeeling, _messagesComps);
+        
+    }
+
+    private List<MessageComp>? CreateMessageComp(List<Message> messages)
+    {
+        
+        List<MessageComp> messageComps = new List<MessageComp>();
+        foreach (var msg in messages)
+        {
+            messageComps.Add(new MessageComp(msg));
+        }
+        
+        return messageComps;
+    }
+
+    private List<Message> GetMesseges(Chat chat)
+    {
+        List<Message> messeges = new List<Message>();
+        var messageList = chat.Element.Elements("Message");
+        foreach (var msg in messageList)
+        {
+            messeges.Add(new Message(msg));
+        }
+        
+        return messeges;
         
     }
 
@@ -43,12 +69,18 @@ public class ChatComp : StackPanel
        
     }
     
-    private void CrateChatComp(EFeelings chatEFeeling)
+    private void CrateChatComp(EFeelings chatEFeeling, List<MessageComp> messageComps)
     {
         
         Label labelFeeling = new Label();
         labelFeeling.Content = chatEFeeling.ToString();
         Children.Add(labelFeeling);
+
+        foreach (var msg in messageComps)
+        {
+            Children.Add(msg);
+        }
+        
 
     }
     

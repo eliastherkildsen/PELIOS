@@ -17,6 +17,9 @@ public class MessageComp : StackPanel
     {
         _message = message; 
         _messageText = GetMessageFromElemet(_message.Element); 
+        _messageLabel = new Label();
+        _messageLabel.Content = _messageText;
+        _deleteButton = new Button();
         
         Children.Add(_messageLabel);
         Children.Add(_deleteButton);
