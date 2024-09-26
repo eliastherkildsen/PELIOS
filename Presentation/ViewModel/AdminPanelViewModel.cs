@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using WPF_MVVM_TEMPLATE.Application.Usecases;
 using WPF_MVVM_TEMPLATE.Entitys;
 using WPF_MVVM_TEMPLATE.Infrastructure;
@@ -13,10 +14,14 @@ namespace WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 public class AdminPanelViewModel : ViewModelBase
 {
     private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
-    public ObservableCollection<StackPanel> ChatComps
+    public ObservableCollection<StackPanel> UiComps
     {
        get => _UIComps;
-       set => _UIComps = value;
+       set
+       {
+          _UIComps = value;
+          OnPropertyChanged();
+       }
     }
     
     private List<Chat> _chats;
@@ -48,8 +53,6 @@ public class AdminPanelViewModel : ViewModelBase
     public AdminPanelViewModel()
     {
         _chats = LoadChats();
-        _UIComps = DisplayChats(_chats);
-
     }
     
     private List<Chat> LoadChats()
@@ -72,4 +75,12 @@ public class AdminPanelViewModel : ViewModelBase
 
     }
    
+    public ICommand CommandDisplayAll => new CommandBase((Object commandPara) =>
+    {
+       {
+          UiComps = DisplayChats(_chats);
+          Debug.WriteLine("Displaing all chats");
+       }
+    });
+    
 }
