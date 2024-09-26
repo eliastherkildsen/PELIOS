@@ -8,14 +8,16 @@
         <SolidColorBrush x:Key="PrimaryBackGround" Color="#415A77" />
         <SolidColorBrush x:Key="SecondaryBackGround" Color="#778DA9"/>
         <SolidColorBrush x:Key="InteractiveBackGround" Color="#457b9d"/>
-        <SolidColorBrush x:Key="Text" Color="#E0E1DD"></SolidColorBrush>
+        <SolidColorBrush x:Key="Text" Color="MediumTurquoise"></SolidColorBrush>
         
         <Style TargetType="Label">
-            <Setter Property="Foreground" Value="{StaticResource Text}" ></Setter>
+            <Setter Property="Foreground" Value="{StaticResource Text}" />
+            <Setter Property="FontWeight" Value="Bold" />
         </Style>
         <Style TargetType="Button">
             <Setter Property="Foreground" Value="{StaticResource Text}"></Setter>
             <Setter Property="Background" Value="{StaticResource InteractiveBackGround}"></Setter>
+            <Setter Property="FontWeight" Value="Bold" />
         </Style>
         
     </Application.Resources>
