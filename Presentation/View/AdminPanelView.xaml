@@ -41,7 +41,7 @@
                 Content="Click me"
                 Width="200" 
                 Height="30">
-            
+                
                 <b:Interaction.Behaviors>
                     <local:FunBehavior></local:FunBehavior>
                 </b:Interaction.Behaviors>

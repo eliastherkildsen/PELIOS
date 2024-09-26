@@ -23,5 +23,9 @@ public class Chat
         _element = element;
     }
     
+    public XElement GetElement()
+    {
+        return _element;
+    }
     
 }
