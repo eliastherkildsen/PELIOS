@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="SAD">
+    <Message>
+        <User>Frank</User>
+        <Text>I just don’t see how SQL is going to let us stay agile for this project, Tommy. NoSQL feels like the better choice, but I get the sense we’re going with SQL anyway.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I understand, Frank, but we’ve already committed to teaching relational databases in this course. Switching to NoSQL now could confuse the students.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I know you’re right... It’s just frustrating. I feel like NoSQL would prepare them better for real-world scenarios, but I guess it’s not happening.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>It’s tough. I feel bad too because I know how much you care about staying modern. Maybe we can find a way to work NoSQL into a future course?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yeah, maybe. I just wish we could give the students a taste of it now. Feels like a missed opportunity.</Text>
+    </Message>
+</MessageExchange>
+

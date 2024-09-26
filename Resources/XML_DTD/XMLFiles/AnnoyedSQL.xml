@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="ANNOYED">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, I don’t get why you’re still clinging to SQL. We’ve had this conversation so many times. NoSQL is the clear choice for this kind of project.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Clinging? Frank, it’s not clinging. SQL is the gold standard for a reason. And honestly, I’m tired of rehashing this NoSQL argument.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Every time I bring up NoSQL, you shut it down. I’m just trying to adapt to modern needs, and you’re making this harder than it has to be.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I’m not making it hard, Frank. I’m being practical. You’re always pushing NoSQL as if it’s the solution to everything, but it’s not.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It’s not everything, but it’s better for THIS project! Can we just agree to try it once instead of sticking with the same old SQL every time?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Fine, Frank. Let’s move on, but I still think you’re overhyping NoSQL. It’s not some magic fix.</Text>
+    </Message>
+</MessageExchange>
+

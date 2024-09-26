@@ -10,18 +10,32 @@
 
     <DockPanel>
         
-        <StackPanel DockPanel.Dock="Left" Background="Red" x:Name="pp">
+        <StackPanel DockPanel.Dock="Left" 
+                    Background="{StaticResource PrimaryBackGround}" 
+                    x:Name="pp"
+                    >
         
-            <Label Content="Adming panle">
+            <Label Content="Admin Panel"
+                   FontSize="15"
+                   >
                 
             </Label>
-            <Label Content="feeling"></Label>
+            <Label Content="Feeling"></Label>
             <ComboBox></ComboBox>
-            <Label Content="search"></Label>
-            <TextBox></TextBox>
+            <Label Content="Search"></Label>
+            <TextBox x:Name="SearchBox" 
+                     Text="{Binding SearchTerm, UpdateSourceTrigger=LostFocus}"
+                     
+                     >
+            </TextBox>
+            
+            <!-- This button does nothing other than remove focus from SearchBox -->
+            <Button x:Name="Search" 
+                    Content="Search"
+                    />
         </StackPanel>
         
-        <StackPanel Background="Blue" x:Name="aaa">
+        <StackPanel Background="{StaticResource SecondaryBackGround}" x:Name="aaa">
             
             <Button 
                 Content="Click me"
@@ -32,7 +46,8 @@
                     <local:FunBehavior></local:FunBehavior>
                 </b:Interaction.Behaviors>
             
-            </Button>    
+            </Button> 
+            
         </StackPanel>
         
         

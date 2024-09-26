@@ -1,6 +1,11 @@
-﻿namespace WPF_MVVM_TEMPLATE.Application.Usecases;
+﻿
+using System.Windows;
+using System.Windows.Documents;
+using WPF_MVVM_TEMPLATE.Entitys;
 
-public class SearchChat
+namespace WPF_MVVM_TEMPLATE.Application.Usecases;
+
+public static class SearchChat
 {
     
 }

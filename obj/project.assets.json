@@ -50,19 +50,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kamil\\.nuget\\packages\\": {}
+    "C:\\Users\\AlexG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
+      "projectUniqueName": "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
       "projectName": "WPF_MVVM_TEMPLATE",
-      "projectPath": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
-      "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\obj\\",
+      "projectPath": "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
+      "packagesPath": "C:\\Users\\AlexG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AlexG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
