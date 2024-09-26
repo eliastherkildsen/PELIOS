@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="EXCITED">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, imagine how cool it would be if we used NoSQL for this project! The students would get hands-on experience with a cutting-edge technology!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>That’s true, Frank! But you know what’s also cool? SQL is such a solid foundation, and the students could really master the core principles with it!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Yeah, but NoSQL would let them explore new horizons! Think about the possibilities with flexible schema designs and scalability!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I can see your point! They’d learn so much about working with big data in NoSQL, and it would be awesome to see their excitement when they realize the potential!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! And they’d get to experience something beyond traditional databases. This could really push their skills to the next level!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Alright, Frank, you’ve sold me! Let’s do it! I’m excited to see what the students come up with using NoSQL!</Text>
+    </Message>
+</MessageExchange>
+
