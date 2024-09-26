@@ -31,8 +31,8 @@ public class FilterChatMessage
         foreach (Chat chat in chatList)
         {
             // String for getting the sentiment of a chat
-            string sentiment = chat.GetElement().Attribute("sentiment")?.Value;
-            var messageList = chat.GetElement().Elements("Message")
+            string sentiment = chat.Element.Attribute("sentiment")?.Value;
+            var messageList = chat.Element.Elements("Message")
                 .Select(m => new
                 {
                     User = m.Element("User")?.Value,
@@ -45,7 +45,7 @@ public class FilterChatMessage
                 if (messages.Text.Contains(searchText))
                 {
                     // Adds the message containing the search word to a list
-                    foundMessages.Add(new Message( messages.Text, sentiment, chat.GetElement().Attribute("id")?.Value));
+                    foundMessages.Add(new Message( messages.Text, sentiment, chat.Element.Attribute("id")?.Value));
                 }
             }
         }

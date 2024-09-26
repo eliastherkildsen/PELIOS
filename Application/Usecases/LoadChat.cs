@@ -18,10 +18,5 @@ public class LoadChat
     {
         return _repo.GetAllChats(_path); 
     }
-
-    public Chat GetChatById(int id)
-    {
-        return _repo.GetChat(id);
-    }
     
 }

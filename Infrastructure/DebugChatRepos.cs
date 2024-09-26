@@ -51,7 +51,7 @@ public class DebugChatRepos : IChatRepos
         );
 
         
-        return new Chat(EFeelings.Angry, messageExchange); 
+        return new Chat(messageExchange, EFeelings.Angry); 
 
     }
     
