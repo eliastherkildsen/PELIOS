@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\elias\RiderProjects\PELIOS\obj\Debug\net8.0-windows\
+C:\Users\kamil\RiderProjects\PELIOS\obj\Debug\net8.0-windows\
 WPF_MVVM_TEMPLATE
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\elias\RiderProjects\PELIOS\Presentation\App.xaml
+C:\Users\kamil\RiderProjects\PELIOS\Presentation\App.xaml
 21894952645
 
-13540586502
-199-898095845
+17-173335764
+199-715196018
 Presentation\View\AdminPanelView.xaml;Presentation\View\MainWindow.xaml;
 
 True
