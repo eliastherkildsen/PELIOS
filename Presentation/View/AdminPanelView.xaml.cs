@@ -20,7 +20,7 @@ public partial class AdminPanelView : UserControl
             new Message("Du elsker fisk!"),
         }; 
 
-        ChatComp chatComp = new ChatComp(Feelings.Angry, messageList ); 
+        ChatComp chatComp = new ChatComp(EFeelings.Angry, messageList ); 
         aaa.Children.Add(chatComp);
     }
     

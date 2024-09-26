@@ -1,6 +1,6 @@
 ﻿namespace WPF_MVVM_TEMPLATE.Entitys;
 
-public enum Feelings
+public enum EFeelings
 {
     Happy,
     Sad, 

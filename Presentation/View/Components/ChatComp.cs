@@ -9,23 +9,23 @@ public class ChatComp : StackPanel
 
     private List<MessageComp> _messagesComps;
     private List<Message> _messages;
-    private Feelings _ChatFeeling;
+    private EFeelings _chatEFeeling;
 
-    public ChatComp(Feelings chatFeeling, List<Message> messages)
+    public ChatComp(EFeelings chatEFeeling, List<Message> messages)
     {
-        _ChatFeeling = chatFeeling;
+        _chatEFeeling = chatEFeeling;
         _messages = messages;
 
         _messagesComps = CreateMessageComp(_messages);
-        CrateChatComp(_messagesComps, chatFeeling);
+        CrateChatComp(_messagesComps, chatEFeeling);
         
     }
 
-    private void CrateChatComp(List<MessageComp> messageComps, Feelings chatFeeling)
+    private void CrateChatComp(List<MessageComp> messageComps, EFeelings chatEFeeling)
     {
         
         Label labelFeeling = new Label();
-        labelFeeling.Content = chatFeeling.ToString();
+        labelFeeling.Content = chatEFeeling.ToString();
         
         Label lableMessageOcurence = new Label();
         lableMessageOcurence.Content = messageComps.Count;
