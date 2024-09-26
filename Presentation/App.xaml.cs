@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Windows;
 using WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 namespace WPF_MVVM_TEMPLATE.Presentation;
@@ -9,7 +8,7 @@ namespace WPF_MVVM_TEMPLATE.Presentation;
 /// <summary>
 /// Interaction logic for App.xaml
 /// </summary>
-public partial class App : Application, INotifyPropertyChanged
+public partial class App : System.Windows.Application, INotifyPropertyChanged
 {
 
     private ViewModelBase? _currentViewModel;
