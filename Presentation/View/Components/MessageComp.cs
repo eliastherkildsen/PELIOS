@@ -16,8 +16,6 @@ public class MessageComp : StackPanel
     private Message _message;
     private readonly string _messageSender; 
     
-    
-
     public MessageComp(Message message)
     {
         _message = message;
