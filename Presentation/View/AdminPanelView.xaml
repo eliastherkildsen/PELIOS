@@ -33,6 +33,10 @@
             <Button x:Name="Search" 
                     Content="Search"
                     />
+            
+            <Button Content="Display all" Command="{Binding CommandDisplayAll}"/>
+            
+            
         </StackPanel>
         
 
@@ -40,7 +44,7 @@
                         CanVerticallyScroll="True">
                 
 
-                <ItemsControl ItemsSource="{Binding ChatComps}">
+                <ItemsControl ItemsSource="{Binding UiComps}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel CanVerticallyScroll="True"/>
