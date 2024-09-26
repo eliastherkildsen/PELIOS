@@ -1,7 +1,5 @@
-using System.Printing.IndexedProperties;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Xml.Linq;
 using WPF_MVVM_TEMPLATE.Entitys;
@@ -12,35 +10,25 @@ public class MessageComp : StackPanel
 {
     
     private Label _title;
-    private TextBlock _message;
-    private Label _messageLabel;
+    private TextBlock _messageBlock;
     private Button _deleteButton;
-    private String _messageText;
+    private readonly string _messageText;
     private Message _message;
+    private readonly string _messageSender; 
     
     
+
     public MessageComp(Message message)
-
-    public MessageComp(string title, string message)
     {
-        _message = message; 
+        _message = message;
         _messageText = GetMessageFromElemet(_message.Element); 
-        _messageLabel = new Label();
-        _messageLabel.Content = _messageText;
-        _deleteButton = new Button();
-        
-        Children.Add(_messageLabel);
-        Children.Add(_deleteButton);
+        _messageSender = GetSenderFromElemet(_message.Element);
+        CreateUi();
         
     }
 
-    private string GetMessageFromElemet(XElement element)
+    private void CreateUi()
     {
-        var message = from e in element.Descendants("Text") select e; 
-        
-        if (!message.Any()) throw new NullReferenceException("The message is empty");
-        return message.First().Value; 
-    }
         // Create a new Grid with two rows and two columns
         Grid grid = new Grid
         {
@@ -58,21 +46,21 @@ public class MessageComp : StackPanel
         grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto }); // Button gets as much space as needed
 
         // Create UI elements
-        _title = CreateLabel(title);
-        _message = CreateTextBlock(message);
+        _title = CreateLabel(_messageSender);
+        _messageBlock = CreateTextBlock(_messageText);
         _deleteButton = CreateButton("Delete");
 
         // Place elements in the Grid
         Grid.SetRow(_title, 0);  // Title in the first row
-        Grid.SetRow(_message, 1); // Message in the second row, first column
-        Grid.SetColumn(_message, 0);
+        Grid.SetRow(_messageBlock, 1); // Message in the second row, first column
+        Grid.SetColumn(_messageBlock, 0);
 
         Grid.SetRow(_deleteButton, 1); // Button in the second row, second column
         Grid.SetColumn(_deleteButton, 1);
 
         // Add elements to Grid
         grid.Children.Add(_title);
-        grid.Children.Add(_message);
+        grid.Children.Add(_messageBlock);
         grid.Children.Add(_deleteButton);
         
         Border border = new Border
@@ -90,7 +78,23 @@ public class MessageComp : StackPanel
         Children.Add(border);
     }
 
-        private TextBlock CreateTextBlock(string message)
+    private string GetMessageFromElemet(XElement element)
+    {
+        var message = from e in element.Descendants("Text") select e;
+
+        if (!message.Any()) throw new NullReferenceException("The message is empty");
+        return message.First().Value;
+    }    
+    
+    private string GetSenderFromElemet(XElement element)
+    {
+        var message = from e in element.Descendants("User") select e;
+
+        if (!message.Any()) throw new NullReferenceException("The message is empty");
+        return message.First().Value;
+    }
+    
+    private TextBlock CreateTextBlock(string message)
         {
             TextBlock textBlock = new TextBlock
             {
@@ -103,7 +107,7 @@ public class MessageComp : StackPanel
             return textBlock;
         }
 
-        private Label CreateLabel(string content)
+    private Label CreateLabel(string content)
         {
             var label = new Label
             {
@@ -115,7 +119,7 @@ public class MessageComp : StackPanel
             return label;
         }
 
-        private Button CreateButton(string content)
+    private Button CreateButton(string content)
         {
             var button = new Button
             {

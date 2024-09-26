@@ -40,7 +40,6 @@ public class AdminPanelViewModel : ViewModelBase
         LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
     }
-   
    public string SearchTerm
    {
       get => _searchTerm;

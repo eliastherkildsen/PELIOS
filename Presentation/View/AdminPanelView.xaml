@@ -35,29 +35,21 @@
                     />
         </StackPanel>
         
-        <StackPanel Background="{StaticResource SecondaryBackGround}" x:Name="aaa">
-            
-            <Button 
-                Content="Click me"
-                Width="200" 
-                Height="30">
+
+            <StackPanel Background="{StaticResource SecondaryBackGround}" 
+                        CanVerticallyScroll="True">
                 
-                <b:Interaction.Behaviors>
-                    <local:FunBehavior></local:FunBehavior>
-                </b:Interaction.Behaviors>
-            
-            </Button> 
-            
-            
-            <ItemsControl ItemsSource="{Binding ChatComps}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
-            
-        </StackPanel>
+
+                <ItemsControl ItemsSource="{Binding ChatComps}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel CanVerticallyScroll="True"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+                
+            </StackPanel>
         
         
     </DockPanel>
