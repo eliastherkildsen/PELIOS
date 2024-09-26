@@ -12,12 +12,12 @@ public partial class AdminPanelView : UserControl
         
         List<Message> messageList = new List<Message>()
         {
-            new Message("Jeg elsker dig!"),
-            new Message("Du elsker mig!"),
-            new Message("Vi hader DAO!"),
-            new Message("Du elsker fisk"),
-            new Message("Vi hader DAO!"),
-            new Message("Du elsker fisk!"),
+            new Message("Jeg elsker dig!", "", ""),
+            new Message("Du elsker mig!", "", ""),
+            new Message("Vi hader DAO!", "", ""),
+            new Message("Du elsker fisk", "", ""),
+            new Message("Vi hader DAO!", "", ""),
+            new Message("Du elsker fisk!", "", ""),
         }; 
 
         ChatComp chatComp = new ChatComp(EFeelings.Angry, messageList ); 

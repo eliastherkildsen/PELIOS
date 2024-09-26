@@ -6,4 +6,5 @@ public interface IChatRepos
 {
     List<Chat> GetAllChats(); 
     Chat GetChat(int id);
+    
 }
