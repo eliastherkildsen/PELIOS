@@ -24,7 +24,7 @@ public class AdminPanelViewModel : ViewModelBase
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources");
+        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
     }
    private string _searchTerm;
@@ -40,6 +40,10 @@ public class AdminPanelViewModel : ViewModelBase
             _searchTerm = value;
             OnPropertyChanged(nameof(SearchTerm));
             Debug.WriteLine($"SearchTerm: {_searchTerm}");
+            
+            FilterChatMessage filterChatMessage = new FilterChatMessage(_chats);
+            List<Message> list = filterChatMessage.Search(_searchTerm);
+            
          }
          else
          {
