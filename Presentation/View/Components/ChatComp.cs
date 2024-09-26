@@ -1,5 +1,5 @@
-﻿using System.Windows.Controls;
-using System.Windows.Media;
+﻿using System.Diagnostics;
+using System.Windows.Controls;
 using WPF_MVVM_TEMPLATE.Entitys;
 
 namespace WPF_MVVM_TEMPLATE.Presentation.View.Components;
@@ -9,50 +9,46 @@ public class ChatComp : StackPanel
 
     private List<MessageComp> _messagesComps;
     private List<Message> _messages;
+    private Chat _chat;
     private EFeelings _chatEFeeling;
 
-    public ChatComp(EFeelings chatEFeeling, List<Message> messages)
+    public ChatComp(Chat chat)
     {
-        _chatEFeeling = chatEFeeling;
-        _messages = messages;
-
-        _messagesComps = CreateMessageComp(_messages);
-        CrateChatComp(_messagesComps, chatEFeeling);
+        _chatEFeeling = GetChatFeeling(chat);
+        //_messages = messages;
+        
+        CrateChatComp(_chatEFeeling);
         
     }
 
-    private void CrateChatComp(List<MessageComp> messageComps, EFeelings chatEFeeling)
+    private EFeelings GetChatFeeling(Chat chat)
+    {
+        
+       var result = chat.Element.Attribute("sentiment");
+       // checking if feeling is not set. 
+       if (result == null) throw new NullReferenceException("sentement is null");
+       string feeling = result.Value.ToLower();
+       
+       Debug.WriteLine(feeling);
+
+       if (feeling == "angry") return EFeelings.Angry; 
+       if (feeling == "happy") return EFeelings.Happy;
+       if (feeling == "sad") return EFeelings.Sad;
+       if (feeling == "confused") return EFeelings.Confused;
+       if (feeling == "annoyed") return EFeelings.Annoyed;
+       if (feeling == "hopeful") return EFeelings.Hopefull;
+       if (feeling == "excited") return EFeelings.Excited;
+       
+       throw new NullReferenceException("feeling is null or not a valid feeling");
+       
+    }
+    
+    private void CrateChatComp(EFeelings chatEFeeling)
     {
         
         Label labelFeeling = new Label();
         labelFeeling.Content = chatEFeeling.ToString();
-        
-        Label lableMessageOcurence = new Label();
-        lableMessageOcurence.Content = messageComps.Count;
-
         Children.Add(labelFeeling);
-        Children.Add(lableMessageOcurence);
-
-        foreach (var VARIABLE in messageComps)
-        {
-            Children.Add(VARIABLE);
-
-        }
-        
-
-    }
-
-    private List<MessageComp> CreateMessageComp(List<Message> messages)
-    {
-        
-        List<MessageComp> messageComps = new List<MessageComp>();
-
-        foreach (Message message in messages)
-        {
-            messageComps.Add(new MessageComp(message.Text));
-        }
-
-        return messageComps; 
 
     }
     

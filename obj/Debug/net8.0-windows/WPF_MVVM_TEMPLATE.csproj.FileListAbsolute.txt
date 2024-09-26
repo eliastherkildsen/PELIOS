@@ -107,3 +107,4 @@ C:\Users\mrknu\RiderProjects\PELIOS\obj\Debug\net8.0-windows\refint\WPF_MVVM_TEM
 C:\Users\mrknu\RiderProjects\PELIOS\obj\Debug\net8.0-windows\WPF_MVVM_TEMPLATE.pdb
 C:\Users\mrknu\RiderProjects\PELIOS\obj\Debug\net8.0-windows\WPF_MVVM_TEMPLATE.genruntimeconfig.cache
 C:\Users\mrknu\RiderProjects\PELIOS\obj\Debug\net8.0-windows\ref\WPF_MVVM_TEMPLATE.dll
+C:\Users\elias\RiderProjects\PELIOS\obj\Debug\net8.0-windows\Presentation\App.baml

@@ -11,20 +11,8 @@ public partial class AdminPanelView : UserControl
     public AdminPanelView()
     {
         InitializeComponent();
-        this.DataContext = new AdminPanelViewModel();
+        DataContext = new AdminPanelViewModel();
         
-        List<Message> messageList = new List<Message>()
-        {
-            new Message("Jeg elsker dig!", "", ""),
-            new Message("Du elsker mig!", "", ""),
-            new Message("Vi hader DAO!", "", ""),
-            new Message("Du elsker fisk", "", ""),
-            new Message("Vi hader DAO!", "", ""),
-            new Message("Du elsker fisk!", "", ""),
-        }; 
-
-        ChatComp chatComp = new ChatComp(EFeelings.Angry, messageList ); 
-        aaa.Children.Add(chatComp);
     }
 
 

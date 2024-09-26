@@ -48,6 +48,15 @@
             
             </Button> 
             
+            
+            <ItemsControl ItemsSource="{Binding ChatComps}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            
         </StackPanel>
         
         

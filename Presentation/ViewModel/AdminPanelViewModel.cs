@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
 using WPF_MVVM_TEMPLATE.Application.Usecases;
 using WPF_MVVM_TEMPLATE.Entitys;
 using WPF_MVVM_TEMPLATE.Infrastructure;
@@ -12,22 +11,35 @@ namespace WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 public class AdminPanelViewModel : ViewModelBase
 {
-    
+    private ObservableCollection<ChatComp> _chatComps;
+
+    public ObservableCollection<ChatComp> ChatComps
+    {
+       get => _chatComps;
+       set => _chatComps = value;
+    }
     private List<Chat> _chats;
+    private string _searchTerm;
+
     public AdminPanelViewModel()
     {
         _chats = LoadChats();
-            
+        _chatComps = new ObservableCollection<ChatComp>();
+        foreach (var chat in _chats)
+        {
+           _chatComps.Add(new ChatComp(chat));
+        }
+        
+        
     }
     
-    private List<Chat> LoadChats()
+   private List<Chat> LoadChats()
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources");
+        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
     }
-   private string _searchTerm;
    
    public string SearchTerm
    {

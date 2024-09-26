@@ -6,7 +6,11 @@ public class Chat
 {
     private EFeelings? _feeling;
     private XElement _element;
-    
+
+    public XElement Element
+    {
+        get => _element;
+    }
     
     public Chat(XElement element)
     {
