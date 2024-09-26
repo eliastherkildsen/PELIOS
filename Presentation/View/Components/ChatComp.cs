@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using WPF_MVVM_TEMPLATE.Entitys;
 
 namespace WPF_MVVM_TEMPLATE.Presentation.View.Components;
@@ -71,17 +73,30 @@ public class ChatComp : StackPanel
     
     private void CrateChatComp(EFeelings chatEFeeling, List<MessageComp> messageComps)
     {
+        int count = 0;
+        Label feeling = CreateLabel(chatEFeeling.ToString());
+        Children.Add(feeling);
         
-        Label labelFeeling = new Label();
-        labelFeeling.Content = chatEFeeling.ToString();
-        Children.Add(labelFeeling);
-
         foreach (var msg in messageComps)
         {
             Children.Add(msg);
+            count++;
         }
         
+        feeling.Content = feeling.Content + " | Messages: " + count.ToString();
+        
 
+    }
+
+    private Label CreateLabel(string text)
+    {
+        Label labelFeeling = new Label();
+        labelFeeling.Content = text;
+        labelFeeling.FontSize = 20;
+        labelFeeling.FontWeight = FontWeights.Bold;
+        labelFeeling.Foreground = Brushes.DarkTurquoise;
+        
+        return labelFeeling;
     }
     
     

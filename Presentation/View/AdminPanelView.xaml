@@ -36,18 +36,26 @@
         </StackPanel>
         
 
+        
             <StackPanel Background="{StaticResource SecondaryBackGround}" 
                         CanVerticallyScroll="True">
                 
-
+                <ScrollViewer DockPanel.Dock="Right" 
+                              Background="{StaticResource SecondaryBackGround}" 
+                              VerticalScrollBarVisibility="Auto"
+                              MaxHeight="1000">
                 <ItemsControl ItemsSource="{Binding ChatComps}">
                     <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel CanVerticallyScroll="True"/>
-                        </ItemsPanelTemplate>
+                        
+                            <ItemsPanelTemplate>
+                                
+                                <VirtualizingStackPanel />
+                                
+                            </ItemsPanelTemplate>
+                        
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
-
+                </ScrollViewer>
                 
             </StackPanel>
         
