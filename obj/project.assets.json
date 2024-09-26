@@ -50,16 +50,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\kamil\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\elias\\.nuget\\packages\\": {}
->>>>>>> refs/heads/Feture
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
       "projectName": "WPF_MVVM_TEMPLATE",
       "projectPath": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
@@ -68,16 +63,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
-      "projectName": "WPF_MVVM_TEMPLATE",
-      "projectPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
-      "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> refs/heads/Feture
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -132,14 +117,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
-    "C:\\Users\\elias\\.nuget\\packages\\": {}
-      "projectUniqueName": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
-      "projectPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
-      "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\obj\\",
-        "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

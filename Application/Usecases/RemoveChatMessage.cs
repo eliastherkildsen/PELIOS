@@ -25,19 +25,21 @@ public class RemoveChatMessage
 
         
         // loads all child elements from XElement and saves them in a list
-        var messages = selectedChat.GetElement().Elements().ToList();
-        Debug.WriteLine(messages);
+        var childElements = selectedChat.Element.Elements().ToList();
+        Debug.WriteLine(childElements);
+
+        
         
         
         // checks if message index is out of bounds
-        if (messageIndex < 0 || messageIndex >= messages.Count)
+        if (messageIndex < 0 || messageIndex >= childElements.Count)
         {
             throw new ArgumentOutOfRangeException($"Message index: {nameof(messageIndex)} is out of bounds.");
         }
         
         
         // removes message element at given index
-        messages.ElementAt(messageIndex).Remove();
+        childElements.ElementAt(messageIndex).Remove();
         
         
         return selectedChat;

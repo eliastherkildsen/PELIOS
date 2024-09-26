@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,6 +14,9 @@ namespace WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 public class AdminPanelViewModel : ViewModelBase
 {
+    // path to the "XMLFiles" folder where the XML files are stored
+    private readonly string _directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\XML_DTD\XMLFiles");
+   
     private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
     public ObservableCollection<StackPanel> UiComps
     {
@@ -58,10 +62,10 @@ public class AdminPanelViewModel : ViewModelBase
     }
     
     private List<Chat> LoadChats()
-    {
+    {  
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
+        LoadChat loadChat = new LoadChat(chatRepos, _directoryPath);
         return loadChat.GetAllChats(); 
     }
 
