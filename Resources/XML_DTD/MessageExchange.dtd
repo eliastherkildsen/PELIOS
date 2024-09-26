@@ -1,0 +1,7 @@
+<!ELEMENT MessageExchange (Message+)>
+
+<!ELEMENT Message (User, Text)>
+<!ELEMENT User (#PCDATA)>
+<!ELEMENT Text (#PCDATA)>
+
+<!ATTLIST MessageExchange sentiment CDATA #REQUIRED>

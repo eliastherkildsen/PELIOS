@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="HAPPY">
+    <Message>
+        <User>Tommy</User>
+        <Text>Frank, guess what? I just found out the students are sharing their code on Snapchat! Isn’t that hilarious?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, they’re actually using Discord, not Snapchat. That’s where all the action happens!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>No way! It’s gotta be Snapchat. I mean, can you imagine them snapping their code to each other? It’s too funny!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It’s not Snapchat, though! They’re on Discord—sending code files, creating channels, all that. It’s way more practical.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>But think about it, Frank! Coding... on Snapchat! That’s so wild, right? These kids come up with the weirdest ways to do things!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I mean, it would be weird... if they were using Snapchat. But they’re not. They’re using Discord. You’re mixing it up!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Well, whatever it is, it’s hilarious either way! These students are just too creative sometimes!</Text>
+    </Message>
+</MessageExchange>

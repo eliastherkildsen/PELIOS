@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="ANGRY">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, I don’t understand why you're so stuck on SQL! This project clearly needs NoSQL's flexibility, but you keep pushing this outdated, rigid system!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Outdated? Are you kidding me? SQL is a cornerstone of database systems, Frank! You can't just throw it aside because you’re obsessed with the latest trends!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It's not about trends, it’s about practicality! NoSQL can handle unstructured data so much better, and you're ignoring that just because you’re too comfortable with SQL!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I’m not comfortable—I’m realistic! SQL is proven, stable, and perfect for the kind of structured data we’re dealing with. Why risk an unstable system?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Stable? It’s restrictive! We’re never going to innovate if we keep using the same old methods!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>This isn't about innovation for the sake of it, Frank. It’s about choosing the right tool for the job!</Text>
+    </Message>
+</MessageExchange>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="SAD">
+    <Message>
+        <User>Tommy</User>
+        <Text>You know, Frank, I just feel like I can’t keep up with these students. Now they’re sharing code on Snapchat, and I didn’t even know that was a thing.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, it’s not Snapchat. They’re on Discord, which makes a lot more sense for coding. You’re not behind; you just got the app wrong.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>But it feels like I’m always one step behind. Snapchat, Discord... I can’t keep track of all these platforms anymore.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Hey, it’s okay! Discord’s really popular now, but it’s easy to confuse things. You’re doing fine.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Still, the fact that they’re using Snapchat for code-sharing and I didn’t know? It’s just... kind of disheartening.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I get that, but they’re not using Snapchat! You’re not missing anything important—it’s Discord. You’ve got this!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I don’t know, Frank. Sometimes I wonder if I’ll ever really catch up.</Text>
+    </Message>
+</MessageExchange>
