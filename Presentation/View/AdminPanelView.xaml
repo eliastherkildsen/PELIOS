@@ -33,22 +33,27 @@
             <Button x:Name="Search" 
                     Content="Search"
                     />
+            
+            <Button Content="Display all" Command="{Binding CommandDisplayAll}"/>
+            
+            
         </StackPanel>
         
-        <StackPanel Background="{StaticResource SecondaryBackGround}" x:Name="aaa">
-            
-            <Button 
-                Content="Click me"
-                Width="200" 
-                Height="30">
-            
-                <b:Interaction.Behaviors>
-                    <local:FunBehavior></local:FunBehavior>
-                </b:Interaction.Behaviors>
-            
-            </Button> 
-            
-        </StackPanel>
+
+            <StackPanel Background="{StaticResource SecondaryBackGround}" 
+                        CanVerticallyScroll="True">
+                
+
+                <ItemsControl ItemsSource="{Binding UiComps}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel CanVerticallyScroll="True"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+                
+            </StackPanel>
         
         
     </DockPanel>

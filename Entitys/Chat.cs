@@ -4,19 +4,13 @@ namespace WPF_MVVM_TEMPLATE.Entitys;
 
 public class Chat
 {
-    private EFeelings? _feeling;
-    private XElement _element;
+    public EFeelings Feeling {get; set;}
+    public XElement Element { get; set; }
     
-    
-    public Chat(XElement element)
+    public Chat(XElement element, EFeelings feeling)
     {
-        _element = element; 
-    }
-
-    public Chat(EFeelings feeling, XElement element)
-    {
-        _feeling = feeling;
-        _element = element;
+        Element = element; 
+        Feeling = feeling;
     }
 
     public XElement GetElement()

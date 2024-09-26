@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using WPF_MVVM_TEMPLATE.Entitys;
 
@@ -9,51 +11,70 @@ public class ChatComp : StackPanel
 
     private List<MessageComp> _messagesComps;
     private List<Message> _messages;
+    private Chat _chat;
     private EFeelings _chatEFeeling;
 
-    public ChatComp(EFeelings chatEFeeling, List<Message> messages)
+    public ChatComp(Chat chat)
     {
-        _chatEFeeling = chatEFeeling;
-        _messages = messages;
-
+        _chatEFeeling = chat.Feeling;
+        _messages = GetMesseges(chat);
         _messagesComps = CreateMessageComp(_messages);
-        CrateChatComp(_messagesComps, chatEFeeling);
+        
+        CrateChatComp(_chatEFeeling, _messagesComps);
         
     }
 
-    private void CrateChatComp(List<MessageComp> messageComps, EFeelings chatEFeeling)
-    {
-        
-        Label labelFeeling = new Label();
-        labelFeeling.Content = chatEFeeling.ToString();
-        
-        Label lableMessageOcurence = new Label();
-        lableMessageOcurence.Content = messageComps.Count;
-
-        Children.Add(labelFeeling);
-        Children.Add(lableMessageOcurence);
-
-        foreach (var VARIABLE in messageComps)
-        {
-            Children.Add(VARIABLE);
-
-        }
-        
-
-    }
-
-    private List<MessageComp> CreateMessageComp(List<Message> messages)
+    private List<MessageComp>? CreateMessageComp(List<Message> messages)
     {
         
         List<MessageComp> messageComps = new List<MessageComp>();
-
-        foreach (Message message in messages)
+        foreach (var msg in messages)
         {
-            messageComps.Add(new MessageComp(message.Text));
+            messageComps.Add(new MessageComp(msg));
         }
+        
+        return messageComps;
+    }
 
-        return messageComps; 
+    private List<Message> GetMesseges(Chat chat)
+    {
+        List<Message> messeges = new List<Message>();
+        var messageList = chat.Element.Elements("Message");
+        foreach (var msg in messageList)
+        {
+            messeges.Add(new Message(msg));
+        }
+        
+        return messeges;
+        
+    }
+    
+    private void CrateChatComp(EFeelings chatEFeeling, List<MessageComp> messageComps)
+    {
+        int count = 0;
+        Label feeling = CreateLabel(chatEFeeling.ToString());
+        Children.Add(feeling);
+        
+        foreach (var msg in messageComps)
+        {
+            Children.Add(msg);
+            count++;
+        }
+        
+        feeling.Content = feeling.Content + " | Messages: " + count.ToString();
+        
 
+    }
+
+    private Label CreateLabel(string text)
+    {
+        Label labelFeeling = new Label();
+        labelFeeling.Content = text;
+        labelFeeling.FontSize = 20;
+        labelFeeling.FontWeight = FontWeights.Bold;
+        labelFeeling.Foreground = Brushes.DarkTurquoise;
+        
+        return labelFeeling;
     }
     
     

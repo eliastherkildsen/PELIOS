@@ -44,13 +44,37 @@ public class XMLFileChatRepos : IChatRepos
         foreach (var file in validfiles)
         {
             XElement xElement = XElement.Load(file);
-            chats.Add(new Chat(xElement));
+            EFeelings feeling = GetChatFeeling(xElement);
+            Chat chat = new Chat(xElement, feeling);
+            chats.Add(chat);
 
         }
 
         return chats; 
     }
+    
+    private EFeelings GetChatFeeling(XElement element)
+    {
+        
+        var result = element.Attribute("sentiment");
+        // checking if feeling is not set. 
+        if (result == null) throw new NullReferenceException("sentement is null");
+        string feeling = result.Value.ToLower();
+       
+        Debug.WriteLine(feeling);
 
+        if (feeling == "angry") return EFeelings.Angry; 
+        if (feeling == "happy") return EFeelings.Happy;
+        if (feeling == "sad") return EFeelings.Sad;
+        if (feeling == "confused") return EFeelings.Confused;
+        if (feeling == "annoyed") return EFeelings.Annoyed;
+        if (feeling == "hopeful") return EFeelings.Hopefull;
+        if (feeling == "excited") return EFeelings.Excited;
+       
+        throw new NullReferenceException("feeling is null or not a valid feeling");
+       
+    }
+    
     private List<string> ValidFileExtensions(List<string> files)
     {
         List<string> validfiles = new List<string>(); 

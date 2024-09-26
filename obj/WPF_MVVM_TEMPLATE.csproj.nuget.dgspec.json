@@ -70,6 +70,14 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+    "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj": {}
+    "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj": {
+        "projectUniqueName": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
+        "projectPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
+        "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elias\\RiderProjects\\PELIOS\\obj\\",
+          "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
