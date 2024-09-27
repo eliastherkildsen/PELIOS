@@ -4,6 +4,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Xml.Linq;
 using WPF_MVVM_TEMPLATE.Entitys;
+using WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 namespace WPF_MVVM_TEMPLATE.Presentation.View.Components;
 
@@ -49,7 +50,7 @@ public class MessageComp : StackPanel
         _title = CreateLabel(_messageSender);
         _messageBlock = CreateTextBlock(_messageText);
         _deleteButton = CreateButton("Delete");
-
+        
         // Place elements in the Grid
         Grid.SetRow(_title, 0);  // Title in the first row
         Grid.SetRow(_messageBlock, 1); // Message in the second row, first column

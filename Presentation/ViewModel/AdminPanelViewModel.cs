@@ -34,6 +34,7 @@ public class AdminPanelViewModel : ViewModelBase
     private List<Message> _messages;
     private int _selectedChatIndex;
     private int _selectedMessageIndex;
+    
     private string _searchTerm;
     public string SearchTerm
     {
@@ -108,7 +109,7 @@ public class AdminPanelViewModel : ViewModelBase
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
+        LoadChat loadChat = new LoadChat(chatRepos, _directoryPath);
         return loadChat.GetAllChats(); 
     }
 
@@ -137,7 +138,7 @@ public class AdminPanelViewModel : ViewModelBase
 
     }
    
-    public ICommand CommandDisplayAll => new CommandBase((Object commandPara) =>
+    public ICommand CommandDisplayAll => new CommandBase((object commandPara) =>
     {
        {
           UiComps = DisplayChats(_chats);
@@ -185,15 +186,32 @@ public class AdminPanelViewModel : ViewModelBase
     });
     
     
-    public void DeleteMessage()
+    public ICommand CommandDeleteMessage => new CommandBase((object o) =>
     {
+     
+       Debug.WriteLine("Made it!");
+    });
+    
+    
+    
+    
+    public void DeleteMessage(Message message)
+    {
+       var chatContainingMessage = _chats.FirstOrDefault(chat => _chats.Contains(chat));
+
+
+       //.FirstOrDefault(chat => chat.Messages != null && chat.Messages.Contains(message));
+
+       /*
        RemoveChatMessage removeChatMessage = new RemoveChatMessage();
        Chat selectedChat = _chats[_selectedChatIndex];
-        
+
        Chat modifiedChat = removeChatMessage.RemoveMessage(selectedChat, _selectedMessageIndex);
        AddModification(modifiedChat);
+       */
 
     }
+    
 
     private void AddModification(Chat modifiedChat)
     {
