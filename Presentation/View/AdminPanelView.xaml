@@ -37,7 +37,7 @@
             <Button Content="Display all" Command="{Binding CommandDisplayAll}"/>
             
             <Label Content="Word Sentiment"> </Label>
-            <Label Content="{Binding SentimentCount, UpdateSourceTrigger=PropertyChanged}"></Label>
+            <Label x:Name="FeelingCount" Content="{Binding SentimentCount}"></Label>
             
         </StackPanel>
         
