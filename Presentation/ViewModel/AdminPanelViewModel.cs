@@ -1,8 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Security.RightsManagement;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -22,7 +20,7 @@ public class AdminPanelViewModel : ViewModelBase
 
    
    private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
-
+   
    public ObservableCollection<StackPanel> UiComps
    {
       get => _UIComps;
@@ -43,6 +41,7 @@ public class AdminPanelViewModel : ViewModelBase
          _chats = value;
       }
    }
+   
    private List<Message> _messages;
 
     private string _searchTerm;
@@ -63,7 +62,6 @@ public class AdminPanelViewModel : ViewModelBase
             _messages = filterChatMessage.Search(_searchTerm);
              foreach (var msg in _messages)
              {
-                //Debug.WriteLine(msg.Text);
                UiComps.Add(new MessageComp(msg));
              }
              
@@ -128,9 +126,7 @@ public class AdminPanelViewModel : ViewModelBase
           IMessageRepos MessageRepos = new MemoryMessageRepos(chat); 
           LoadMessage loadMessage =    new LoadMessage(MessageRepos);
           List<Message> chatMessages = loadMessage.LoadAllMessages();
-            
-          Debug.WriteLine(chatMessages.Count.ToString());
-            
+          
           chat.Messages = new List<Message>();
           foreach (var message in chatMessages)
           {
@@ -142,98 +138,48 @@ public class AdminPanelViewModel : ViewModelBase
        }
 
        return chatComps; 
-
     }
    
+    
     public ICommand CommandDisplayAll => new CommandBase((Object commandPara) =>
     {
        {
           UiComps = DisplayChats(_chats);
-          Debug.WriteLine("Displaing all chats");
        }
     });
+    
     
     public ICommand CommandDisplayMemo => new CommandBase((Object commandPara) =>
     {
        {
 
-          if (DisplayChats(Chats) != null)
-          {
-             UiComps = DisplayChatDebug();  //DisplayChats(Chats);
-          }
-          else
+          if (UiComps.Count <= 0 || UiComps == null)
           {
              UiComps = DisplayChats(Chats);
           }
+          else
+          {
+             UiComps = DisplayChatDebug();  
+          }
        }
     });
+    
     
     public ICommand DeleteMessageCommand => new CommandBase((Object commandPara) =>
     {
        {
           
-          Debug.WriteLine("Deleting message");
-
-          
           RemoveChatMessage removeChatMessage = new RemoveChatMessage();
           
-          Debug.WriteLine("After creating remove chat message");
-          
           Message msgToDelete = commandPara as Message;
+          
           if (msgToDelete == null) Debug.WriteLine("Message is null");
-          Debug.WriteLine("Before removing message");
-          Debug.WriteLine(Chats.Count.ToString());
-
           
           Chats = removeChatMessage.RemoveMessage(Chats, msgToDelete);
-
-          foreach (var chat in Chats)
-          {
-             Debug.WriteLine(chat.Feeling + ", " + chat.Messages.Count.ToString());
-          }
           
-          
-          
-          Debug.WriteLine("After removeing chat message");
-          Debug.WriteLine(Chats.Count.ToString());
-
-          UiComps = DisplayChatDebug();  //DisplayChats(Chats);
-          
-          Debug.WriteLine("After displaying chat message");
-
-          
+          UiComps = DisplayChatDebug();  
           
        }
     });   
-    
-    private void DeleteMessage(Chat selectedChat, Message msg)
-    {
-
-       foreach (Chat chat in _chats)
-       {
-          
-          if (chat.Equals(selectedChat))
-          {
-             int index = _chats.IndexOf(chat);
-          }
-
-          break;
-       }
-       
-       
-
-       //chat.Messages.Remove(msg);
-       Debug.WriteLine("Found message in _chats");
-
-       DisplayModification();
-       
-    }
-    
-    private void DisplayModification()
-    {
-       Debug.WriteLine("Displaying modification");
-       DisplayChats(Chats);
-       Debug.WriteLine("Displaying chats");
-    }
     
 }

@@ -56,7 +56,7 @@ public class XMLFileChatRepos : IChatRepos
     private EFeelings GetChatFeeling(XElement element)
     {
         
-        var result = element.Attribute("sentiment");
+        var result = (from e in element.Attributes() where e.Name == "sentiment" select e).First();
         // checking if feeling is not set. 
         if (result == null) throw new NullReferenceException("sentement is null");
         string feeling = result.Value.ToLower();
