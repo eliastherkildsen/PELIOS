@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
 
-<MessageExchange sentiment="CONFUSED">
+<MessageExchange sentiment="Confused">
     <Message>
         <User>Frank</User>
         <Text>Tommy, I don't get why we're still talking about SQL. NoSQL seems more appropriate for the flexibility this project needs, don't you think?</Text>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
 
-<MessageExchange sentiment="hopeful">
+<MessageExchange sentiment="Hopeful">
     <Message>
         <User>Tommy</User>
         <Text>Frank, I'm really hopeful about how our students are using Snapchat to collaborate on their coding projects. It's so impressive how they're finding new ways to share their work.</Text>

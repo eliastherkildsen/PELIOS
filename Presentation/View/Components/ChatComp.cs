@@ -42,7 +42,7 @@ public class ChatComp : StackPanel
         var messageList = chat.Element.Elements("Message");
         foreach (var msg in messageList)
         {
-            messeges.Add(new Message(msg));
+            messeges.Add(new Message(msg, chat.Feeling));
         }
         
         return messeges;

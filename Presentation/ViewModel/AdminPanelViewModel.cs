@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Security.RightsManagement;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -25,6 +27,7 @@ public class AdminPanelViewModel : ViewModelBase
     }
     
     private List<Chat> _chats;
+    private List<Message> _messages;
     private string _searchTerm;
     public string SearchTerm
     {
@@ -37,6 +40,16 @@ public class AdminPanelViewModel : ViewModelBase
              _searchTerm = value;
              OnPropertyChanged(nameof(SearchTerm));
              Debug.WriteLine($"SearchTerm: {_searchTerm}");
+             
+             UiComps.Clear();
+             FilterChatMessage filterChatMessage = new FilterChatMessage(_chats);
+            _messages = filterChatMessage.Search(_searchTerm);
+             foreach (var msg in _messages)
+             {
+                //Debug.WriteLine(msg.Text);
+               UiComps.Add(new MessageComp(msg));
+             }
+               
           }
           else
           {
@@ -48,7 +61,37 @@ public class AdminPanelViewModel : ViewModelBase
           }
        }
     }
+    
+    private int _sentimentCount;
+    public int SentimentCount
+    {
+       get => _sentimentCount;
+       set
+       {
 
+          Dictionary<EFeelings, int> sentimentCount = new Dictionary<EFeelings, int>();
+          sentimentCount.Add(EFeelings.Angry, 0);
+          sentimentCount.Add(EFeelings.Happy, 0);
+          sentimentCount.Add(EFeelings.Sad, 0);
+          sentimentCount.Add(EFeelings.Annoyed, 0);
+          sentimentCount.Add(EFeelings.Excited, 0);
+          sentimentCount.Add(EFeelings.Hopeful, 0);
+          sentimentCount.Add(EFeelings.Confused, 0);
+          
+          foreach (var message in _messages)
+          {
+             sentimentCount[message.Feelings]++;
+          }
+
+          string tempFeel = "";
+          int tempCount = 0;
+          foreach (var sentiment in sentimentCount)
+          {
+             
+          }
+          
+       }
+    }
 
     public AdminPanelViewModel()
     {
@@ -59,7 +102,7 @@ public class AdminPanelViewModel : ViewModelBase
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
+        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
     }
 

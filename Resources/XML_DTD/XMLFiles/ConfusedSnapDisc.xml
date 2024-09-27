@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
 
-<MessageExchange sentiment="CONFUSED">
+<MessageExchange sentiment="Confused">
     <Message>
         <User>Tommy</User>
         <Text>Frank, I just don't get it. How are these kids sharing their code on Snapchat? It doesn't even seem like a place you'd do that.</Text>
