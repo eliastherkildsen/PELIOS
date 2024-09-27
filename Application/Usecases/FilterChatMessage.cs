@@ -3,6 +3,8 @@ using System.Net.Mime;
 using System.Windows;
 using System.Xml.Linq;
 using WPF_MVVM_TEMPLATE.Entitys;
+using WPF_MVVM_TEMPLATE.Infrastructure;
+using WPF_MVVM_TEMPLATE.InterfaceAdapter;
 using WPF_MVVM_TEMPLATE.Presentation.View.Components;
 
 namespace WPF_MVVM_TEMPLATE.Application.Usecases;
@@ -31,20 +33,21 @@ public class FilterChatMessage
         foreach (Chat chat in chatList)
         {
             // String for getting the sentiment of a chat
-            string sentiment = chat.Element.Attribute("sentiment")?.Value;
-            var messageList = chat.Element.Elements("Message");
+            IMessageRepos messageRepos = new MemoryMessageRepos(chat);
+            LoadMessage loadMessage = new LoadMessage(messageRepos);
+            var chatMessage = loadMessage.LoadAllMessages(); 
             
-            foreach (var message in messageList)
+            foreach (var message in chatMessage)
             {
                 
-                var text = message.Element("Text");
+                var text = message.Element.Element("Text");
                 
                 if (text.Value.Contains(searchText))
                 {
                     
                     Debug.WriteLine($"I should add this: " + message);
                     // Adds the message containing the search word to a list
-                    foundMessages.Add(new Message(message));
+                    foundMessages.Add(new Message(message.Element, message.Feelings));
                 }
             }
         }

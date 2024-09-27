@@ -8,5 +8,5 @@ public enum EFeelings
     Confused, 
     Annoyed, 
     Excited,
-    Hopefull
+    Hopeful
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
 
-<MessageExchange sentiment="hopeful">
+<MessageExchange sentiment="Hopeful">
     <Message>
         <User>Frank</User>
         <Text>You know, Tommy, I'm really excited about the potential of using NoSQL for this project. It could offer a lot of flexibility, especially with the way students will be handling unstructured data.</Text>

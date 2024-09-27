@@ -11,13 +11,15 @@ public class Message
         MessageExchange = messageExchange;
     }
 
-    public Message(XElement element)
+    public Message(XElement element, EFeelings feelings)
     {
         Element = element;
+        Feelings = feelings;
     }
     
     public string Text { get; set; }
     public string Sentiment { get; set; }
     public string MessageExchange { get; set; }
     public XElement Element { get; set; }
+    public EFeelings Feelings { get; set; }
 }
