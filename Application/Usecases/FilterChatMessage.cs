@@ -40,16 +40,21 @@ public class FilterChatMessage
                 })
                 .ToList();
             
-            foreach (var messages in messageList)
+            foreach (var message in messageList)
             {
-                if (messages.Text.Contains(searchText))
+                
+                var text = message.Element("Text");
+                
+                if (text.Value.Contains(searchText))
                 {
+                    
+                    Debug.WriteLine($"I should add this: " + message);
                     // Adds the message containing the search word to a list
-                    foundMessages.Add(new Message( messages.Text, sentiment, chat.Element.Attribute("id")?.Value));
+                    foundMessages.Add(new Message(message));
                 }
             }
         }
 
         return foundMessages;
     }
-}
+} 
