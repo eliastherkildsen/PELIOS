@@ -8,55 +8,44 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
-    <DockPanel>
-        
+    <DockPanel MaxHeight="1000">
+        <!-- Left Panel -->
         <StackPanel DockPanel.Dock="Left" 
                     Background="{StaticResource PrimaryBackGround}" 
-                    x:Name="pp"
-                    >
+                    x:Name="pp">
         
-            <Label Content="Admin Panel"
-                   FontSize="15"
-                   >
-                
-            </Label>
-            <Label Content="Feeling"></Label>
-            <ComboBox></ComboBox>
-            <Label Content="Search"></Label>
+            <Label Content="Admin Panel" FontSize="18" />
+            <Label Content="Feeling" FontSize="15" />
+            <ComboBox />
+            <Label Content="Search" FontSize="15" />
             <TextBox x:Name="SearchBox" 
-                     Text="{Binding SearchTerm, UpdateSourceTrigger=LostFocus}"
-                     
-                     >
-            </TextBox>
+                     Text="{Binding SearchTerm, UpdateSourceTrigger=LostFocus}" />
             
-            <!-- This button does nothing other than remove focus from SearchBox -->
-            <Button x:Name="Search" 
-                    Content="Search"
-                    />
+            <!-- Button for triggering search -->
+            <Button x:Name="Search" Content="Search" />
             
-            <Button Content="Display all " Command="{Binding CommandDisplayMemo}"/>
+            <!-- Button for displaying all items -->
+            <Button Content="Display all" Command="{Binding CommandDisplayAll}" />
             
             <Label Content="Word Sentiment"> </Label>
-            <Label Content="{Binding SentimentCount, UpdateSourceTrigger=PropertyChanged}"></Label>
+            <Label x:Name="FeelingCount" Content="{Binding SentimentCount}"></Label>
             
         </StackPanel>
         
-
-            <StackPanel Background="{StaticResource SecondaryBackGround}" 
-                        CanVerticallyScroll="True">
-                
-
-                <ItemsControl ItemsSource="{Binding UiComps}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel CanVerticallyScroll="True"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-
-                
-            </StackPanel>
-        
+        <!-- Main content with ScrollViewer for dynamic content -->
+        <ScrollViewer DockPanel.Dock="Right"
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Disabled"
+                      Height="Auto">
+            <ItemsControl ItemsSource="{Binding UiComps}">
+                <ItemsControl.ItemsPanel>
+                    <!-- Use StackPanel for vertical arrangement -->
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
         
     </DockPanel>
 </UserControl>
