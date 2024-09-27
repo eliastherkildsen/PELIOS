@@ -26,6 +26,10 @@ public class SearchChat
         _messages = messages;
     }
     
+    /// <summary>
+    /// For getting in what sentiment a word is most commonly used 
+    /// </summary>
+    /// <returns>string, with what sentiment and how many occurrences</returns>
     public string SentimentCount()
     {
         foreach (var message in _messages)

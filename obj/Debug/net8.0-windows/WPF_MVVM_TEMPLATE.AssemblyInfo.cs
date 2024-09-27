@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPF_MVVM_TEMPLATE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98309a7beac814f61f47889ed159fde2ae75ddc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+369a7899c3f8acc975f47ef717bbdda18ea3c1cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPF_MVVM_TEMPLATE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPF_MVVM_TEMPLATE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

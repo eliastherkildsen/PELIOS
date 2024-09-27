@@ -58,7 +58,7 @@ public class XMLFileChatRepos : IChatRepos
         
         var result = (from e in element.Attributes() where e.Name == "sentiment" select e).First();
         // checking if feeling is not set. 
-        if (result == null) throw new NullReferenceException("sentement is null");
+        if (result == null) throw new NullReferenceException("sentiment is null");
         string feeling = result.Value.ToLower();
        
         Debug.WriteLine(feeling);

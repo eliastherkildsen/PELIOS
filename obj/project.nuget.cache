@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CShu7++ofSg=",
+  "dgSpecHash": "BtgPoj+tLeQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamil\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
+  "projectFilePath": "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\WPF_MVVM_TEMPLATE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kamil\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512"
+    "C:\\Users\\AlexG\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512"
   ],
   "logs": []
 }
