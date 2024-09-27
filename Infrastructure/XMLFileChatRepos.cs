@@ -68,7 +68,7 @@ public class XMLFileChatRepos : IChatRepos
         if (feeling == "sad") return EFeelings.Sad;
         if (feeling == "confused") return EFeelings.Confused;
         if (feeling == "annoyed") return EFeelings.Annoyed;
-        if (feeling == "hopeful") return EFeelings.Hopefull;
+        if (feeling == "hopeful") return EFeelings.Hopeful;
         if (feeling == "excited") return EFeelings.Excited;
        
         throw new NullReferenceException("feeling is null or not a valid feeling");

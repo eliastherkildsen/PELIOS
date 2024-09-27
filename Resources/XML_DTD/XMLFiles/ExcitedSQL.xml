@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
 
-<MessageExchange sentiment="EXCITED">
+<MessageExchange sentiment="Excited">
     <Message>
         <User>Frank</User>
         <Text>Tommy, imagine how cool it would be if we used NoSQL for this project! The students would get hands-on experience with a cutting-edge technology!</Text>
