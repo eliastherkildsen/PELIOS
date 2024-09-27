@@ -95,22 +95,35 @@ public class AdminPanelViewModel : ViewModelBase
 
     public AdminPanelViewModel()
     {
-        _chats = LoadChats();
+        _chats = LoadAllChatsFromDir();
     }
     
-    private List<Chat> LoadChats()
+    private List<Chat> LoadAllChatsFromDir()
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\AlexG\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
+        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\elias\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
     }
 
+    
     private ObservableCollection<StackPanel> DisplayChats(List<Chat> chats)
     {
        ObservableCollection<StackPanel> chatComps = new ObservableCollection<StackPanel>();
+       
        foreach (var chat in _chats)
        {
+
+            IMessageRepos MessageRepos = new MemoryMessageRepos(chat); 
+            LoadMessage loadMessage = new LoadMessage(MessageRepos);
+            List<Message> chatMessages = MessageRepos.GetAllMessages();
+            chat.Messages = new List<Message>();
+            foreach (var message in chatMessages)
+            {
+               chat.Messages.Add(message);
+               
+            }
+            
           chatComps.Add(new ChatComp(chat));
        }
 
@@ -129,12 +142,38 @@ public class AdminPanelViewModel : ViewModelBase
     public ICommand DeleteMessageCommand => new CommandBase((Object commandPara) =>
     {
        {
+          bool found = false; 
           Debug.WriteLine("Delete message called!");
           Debug.WriteLine(commandPara.ToString());
           Message msg = commandPara as Message;
           if (msg != null)
           {
-             Debug.WriteLine($"{msg.Element.Elements("Text")}");
+             Debug.WriteLine($"{msg.Feelings}");
+
+             foreach (var chat in _chats)
+             {
+                
+                if (found) break;
+
+                foreach (var chatMessage in chat.Messages)
+                {
+                   if (found) break;
+
+                   if (msg.GetHashCode() == chatMessage.GetHashCode())
+                   {
+                      
+                      chat.Messages.Remove(chatMessage);
+                      Debug.WriteLine("Found message in _chats");
+                      DisplayChats(_chats);
+                      found = true;
+                   }
+                   
+                }
+
+                
+                
+             }
+             
           }
        }
     });
