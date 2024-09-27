@@ -32,13 +32,7 @@ public class FilterChatMessage
         {
             // String for getting the sentiment of a chat
             string sentiment = chat.Element.Attribute("sentiment")?.Value;
-            var messageList = chat.Element.Elements("Message")
-                .Select(m => new
-                {
-                    User = m.Element("User")?.Value,
-                    Text = m.Element("Text")?.Value
-                })
-                .ToList();
+            var messageList = chat.Element.Elements("Message");
             
             foreach (var message in messageList)
             {
