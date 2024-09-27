@@ -15,19 +15,21 @@ namespace WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 public class AdminPanelViewModel : ViewModelBase
 {
-    private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
-    public ObservableCollection<StackPanel> UiComps
-    {
-       get => _UIComps;
-       set
-       {
-          _UIComps = value;
-          OnPropertyChanged();
-       }
-    }
-    
-    private List<Chat> _chats;
-    private List<Message> _messages;
+   private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
+
+   public ObservableCollection<StackPanel> UiComps
+   {
+      get => _UIComps;
+      set
+      {
+         _UIComps = value;
+         OnPropertyChanged();
+      }
+   }
+
+   private List<Chat> _chats;
+   private List<Message> _messages;
+
     private string _searchTerm;
     public string SearchTerm
     {
@@ -49,7 +51,10 @@ public class AdminPanelViewModel : ViewModelBase
                 //Debug.WriteLine(msg.Text);
                UiComps.Add(new MessageComp(msg));
              }
-               
+             
+             SearchChat searchChat = new SearchChat(_messages);
+             SentimentCount = searchChat.SentimentCount();
+
           }
           else
           {
@@ -62,34 +67,14 @@ public class AdminPanelViewModel : ViewModelBase
        }
     }
     
-    private int _sentimentCount;
-    public int SentimentCount
+    private string _sentimentCount;
+    public string SentimentCount
     {
        get => _sentimentCount;
        set
        {
-
-          Dictionary<EFeelings, int> sentimentCount = new Dictionary<EFeelings, int>();
-          sentimentCount.Add(EFeelings.Angry, 0);
-          sentimentCount.Add(EFeelings.Happy, 0);
-          sentimentCount.Add(EFeelings.Sad, 0);
-          sentimentCount.Add(EFeelings.Annoyed, 0);
-          sentimentCount.Add(EFeelings.Excited, 0);
-          sentimentCount.Add(EFeelings.Hopeful, 0);
-          sentimentCount.Add(EFeelings.Confused, 0);
-          
-          foreach (var message in _messages)
-          {
-             sentimentCount[message.Feelings]++;
-          }
-
-          string tempFeel = "";
-          int tempCount = 0;
-          foreach (var sentiment in sentimentCount)
-          {
-             
-          }
-          
+          _sentimentCount = value;
+          OnPropertyChanged();
        }
     }
 

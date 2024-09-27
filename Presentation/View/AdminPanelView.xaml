@@ -26,6 +26,10 @@
             
             <!-- Button for displaying all items -->
             <Button Content="Display all" Command="{Binding CommandDisplayAll}" />
+            
+            <Label Content="Word Sentiment"> </Label>
+            <Label x:Name="FeelingCount" Content="{Binding SentimentCount}"></Label>
+            
         </StackPanel>
         
         <!-- Main content with ScrollViewer for dynamic content -->
