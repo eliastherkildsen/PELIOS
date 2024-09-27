@@ -31,6 +31,15 @@ public class AdminPanelViewModel : ViewModelBase
     }
     
     private List<Chat> _chats;
+
+    public List<Chat> Chats
+    {
+       get => _chats;
+       set
+       {
+          _chats = value;
+       }
+    }
     private List<Message> _messages;
     private int _selectedChatIndex;
     private int _selectedMessageIndex;
@@ -118,12 +127,15 @@ public class AdminPanelViewModel : ViewModelBase
     {
        ObservableCollection<StackPanel> chatComps = new ObservableCollection<StackPanel>();
        
-       foreach (var chat in _chats)
+       foreach (var chat in chats)
        {
 
             IMessageRepos MessageRepos = new MemoryMessageRepos(chat); 
-            LoadMessage loadMessage = new LoadMessage(MessageRepos);
-            List<Message> chatMessages = MessageRepos.GetAllMessages();
+            LoadMessage loadMessage =    new LoadMessage(MessageRepos);
+            List<Message> chatMessages = loadMessage.LoadAllMessages();
+            
+            Debug.WriteLine(chatMessages.Count.ToString());
+            
             chat.Messages = new List<Message>();
             foreach (var message in chatMessages)
             {
@@ -137,85 +149,104 @@ public class AdminPanelViewModel : ViewModelBase
        return chatComps; 
 
     }
-   
-    public ICommand CommandDisplayAll => new CommandBase((object commandPara) =>
-    {
-       {
-          UiComps = DisplayChats(_chats);
-          Debug.WriteLine("Displaing all chats");
-       }
-    });   
+    
     
     public ICommand DeleteMessageCommand => new CommandBase((Object commandPara) =>
     {
        {
-          bool found = false; 
-          Debug.WriteLine("Delete message called!");
-          Debug.WriteLine(commandPara.ToString());
-          Message msg = commandPara as Message;
-          if (msg != null)
+          
+          Debug.WriteLine("Deleting message");
+
+          
+          RemoveChatMessage removeChatMessage = new RemoveChatMessage();
+          
+          Debug.WriteLine("After creating remove chat message");
+          
+          Message msgToDelete = commandPara as Message;
+          if (msgToDelete == null) Debug.WriteLine("Message is null");
+          Debug.WriteLine("Before removing message");
+          Debug.WriteLine(Chats.Count.ToString());
+
+          
+          Chats = removeChatMessage.RemoveMessage(Chats, msgToDelete);
+
+          foreach (var chat in Chats)
           {
-             Debug.WriteLine($"{msg.Feelings}");
+             Debug.WriteLine(chat.Feeling + ", " + chat.Messages.Count.ToString());
+          }
+          
+          
+          
+          Debug.WriteLine("After removeing chat message");
+          Debug.WriteLine(Chats.Count.ToString());
 
-             foreach (var chat in _chats)
-             {
-                
-                if (found) break;
+          UiComps = DisplayChatDebug();  //DisplayChats(Chats);
+          
+          Debug.WriteLine("After displaying chat message");
 
-                foreach (var chatMessage in chat.Messages)
-                {
-                   if (found) break;
+          
+          
+       }
+    });   
+    
+    public ICommand CommandDisplayMemo => new CommandBase((Object commandPara) =>
+    {
+       {
 
-                   if (msg.GetHashCode() == chatMessage.GetHashCode())
-                   {
-                      
-                      chat.Messages.Remove(chatMessage);
-                      Debug.WriteLine("Found message in _chats");
-                      DisplayChats(_chats);
-                      found = true;
-                   }
-                   
-                }
-
-                
-                
-             }
-             
+          if (DisplayChats(Chats) != null)
+          {
+             UiComps = DisplayChatDebug();  //DisplayChats(Chats);
+          }
+          else
+          {
+             UiComps = DisplayChats(Chats);
           }
        }
     });
     
     
-    public ICommand CommandDeleteMessage => new CommandBase((object o) =>
+
+    private ObservableCollection<StackPanel> DisplayChatDebug()
     {
-     
-       Debug.WriteLine("Made it!");
-    });
-    
-    
-    
-    
-    public void DeleteMessage(Message message)
+       ObservableCollection<StackPanel> chatComps = new ObservableCollection<StackPanel>();
+       foreach (var chat in Chats)
+       {
+          chatComps.Add(new ChatComp(chat));
+       }
+
+       return chatComps;
+    }
+
+
+    private void DeleteMessage(Chat selectedChat, Message msg)
     {
-       var chatContainingMessage = _chats.FirstOrDefault(chat => _chats.Contains(chat));
 
+       foreach (Chat chat in _chats)
+       {
+          
+          if (chat.Equals(selectedChat))
+          {
+             int index = _chats.IndexOf(chat);
+          }
 
-       //.FirstOrDefault(chat => chat.Messages != null && chat.Messages.Contains(message));
+          break;
+       }
+       
+       
 
-       /*
-       RemoveChatMessage removeChatMessage = new RemoveChatMessage();
-       Chat selectedChat = _chats[_selectedChatIndex];
+       //chat.Messages.Remove(msg);
+       Debug.WriteLine("Found message in _chats");
 
-       Chat modifiedChat = removeChatMessage.RemoveMessage(selectedChat, _selectedMessageIndex);
-       AddModification(modifiedChat);
-       */
-
+       DisplayModification();
+       
     }
     
 
-    private void AddModification(Chat modifiedChat)
+    private void DisplayModification()
     {
-       _chats[_selectedChatIndex] = modifiedChat;
+       Debug.WriteLine("Displaying modification");
+       DisplayChats(_chats);
+       Debug.WriteLine("Displaying chats");
     }
     
 }

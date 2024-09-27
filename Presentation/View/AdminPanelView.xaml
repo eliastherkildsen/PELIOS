@@ -34,7 +34,7 @@
                     Content="Search"
                     />
             
-            <Button Content="Display all" Command="{Binding CommandDisplayAll}"/>
+            <Button Content="Display all " Command="{Binding CommandDisplayMemo}"/>
             
             <Label Content="Word Sentiment"> </Label>
             <Label Content="{Binding SentimentCount, UpdateSourceTrigger=PropertyChanged}"></Label>

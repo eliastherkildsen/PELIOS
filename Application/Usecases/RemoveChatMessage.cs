@@ -5,9 +5,9 @@ using WPF_MVVM_TEMPLATE.InterfaceAdapter;
 namespace WPF_MVVM_TEMPLATE.Application.Usecases;
 
 
-public class RemoveChatMessage 
+public class RemoveChatMessage
 {
-    
+
     /// <summary>
     /// This method removes a message from a chat at a specified index
     /// </summary>
@@ -16,34 +16,77 @@ public class RemoveChatMessage
     /// <returns> returns the modified chat object after the message is removed </returns>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
-    public Chat RemoveMessage(Chat selectedChat, int messageIndex)
+    public List<Chat> RemoveMessage(List<Chat> chats, Message message)
     {
-        if (selectedChat == null)
+        List<Chat> removeChats = chats;
+        bool found = false;
+        if (message != null)
         {
-            throw new ArgumentNullException($"Selected chat {nameof(selectedChat)} is null");
+            Debug.WriteLine($"{message.Feelings}");
+
+
+
+            for (int i = 0; i < removeChats.Count; i++)
+            {
+
+                for (int j = 0; j < removeChats[i].Messages.Count; j++)
+                {
+
+                    if (removeChats[i].Messages[j].GetHashCode() == message.GetHashCode())
+                    {
+                        Debug.WriteLine($"Before del {removeChats[i].Messages.Count}");
+                        removeChats[i].Messages.RemoveAt(j);
+                        Debug.WriteLine($"After del {removeChats[i].Messages.Count}");
+                        
+                    }
+                    
+                    Debug.WriteLine($"Before del {removeChats[i].Feeling} :::: {removeChats[i].Messages.Count}");
+
+                }
+
+            }
+
+
         }
-
         
-        // loads all child elements from XElement and saves them in a list
-        var childElements = selectedChat.Element.Elements().ToList();
-        Debug.WriteLine(childElements);
-
-        
-        
-        
-        // checks if message index is out of bounds
-        if (messageIndex < 0 || messageIndex >= childElements.Count)
+        foreach (var chat in removeChats)
         {
-            throw new ArgumentOutOfRangeException($"Message index: {nameof(messageIndex)} is out of bounds.");
+            Debug.WriteLine("IN REMOVECHAT" + chat.Feeling + ", ->> " + chat.Messages.Count.ToString());
         }
         
-        
-        // removes message element at given index
-        childElements.ElementAt(messageIndex).Remove();
-        
-        
-        return selectedChat;
+        return removeChats;
+
     }
+
+
+/*
+foreach (var chat in removeChats)
+{
+    foreach (var chatMessage in chat.Messages)
+    {
+
+        if (message.GetHashCode() == chatMessage.GetHashCode())
+        {
+
+
+
+
+            Debug.WriteLine($"Message count before: {chat.Messages.Count}");
+            chat.Messages.Remove(chatMessage);
+            Debug.WriteLine($"Message count after: {chat.Messages.Count}");
+            Debug.WriteLine("message removed");
+            break;
+        }
+    }
+}
+
+}
+    return chats;
+
+*/
+        
+
+        
     
     
 
