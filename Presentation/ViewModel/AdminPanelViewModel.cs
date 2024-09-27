@@ -81,6 +81,19 @@ public class AdminPanelViewModel : ViewModelBase
           UiComps = DisplayChats(_chats);
           Debug.WriteLine("Displaing all chats");
        }
+    });   
+    
+    public ICommand DeleteMessageCommand => new CommandBase((Object commandPara) =>
+    {
+       {
+          Debug.WriteLine("Delete message called!");
+          Debug.WriteLine(commandPara.ToString());
+          Message msg = commandPara as Message;
+          if (msg != null)
+          {
+             Debug.WriteLine($"{msg.Element.Elements("Text")}");
+          }
+       }
     });
     
 }
