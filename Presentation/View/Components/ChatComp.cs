@@ -17,7 +17,7 @@ public class ChatComp : StackPanel
     public ChatComp(Chat chat)
     {
         _chatEFeeling = chat.Feeling;
-        _messages = GetMesseges(chat);
+        _messages = chat.Messages;
         _messagesComps = CreateMessageComp(_messages);
         
         CrateChatComp(_chatEFeeling, _messagesComps);
@@ -36,18 +36,7 @@ public class ChatComp : StackPanel
         return messageComps;
     }
 
-    private List<Message> GetMesseges(Chat chat)
-    {
-        List<Message> messeges = new List<Message>();
-        var messageList = chat.Element.Elements("Message");
-        foreach (var msg in messageList)
-        {
-            messeges.Add(new Message(msg));
-        }
-        
-        return messeges;
-        
-    }
+   
     
     private void CrateChatComp(EFeelings chatEFeeling, List<MessageComp> messageComps)
     {

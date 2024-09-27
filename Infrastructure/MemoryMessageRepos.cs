@@ -18,7 +18,7 @@ public class MemoryMessageRepos : IMessageRepos
         var messageList = _chat.Element.Elements("Message");
         foreach (var msg in messageList)
         {
-            messeges.Add(new Message(msg));
+            messeges.Add(new Message(msg, _chat.Feeling));
         }
         
         return messeges;

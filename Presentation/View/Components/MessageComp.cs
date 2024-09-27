@@ -1,5 +1,6 @@
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 using System.Xml.Linq;
 using WPF_MVVM_TEMPLATE.Entitys;
@@ -27,6 +28,7 @@ public class MessageComp : StackPanel
 
     private void CreateUi()
     {
+        
         // Create a new Grid with two rows and two columns
         Grid grid = new Grid
         {
@@ -118,15 +120,26 @@ public class MessageComp : StackPanel
         }
 
     private Button CreateButton(string content)
+    {
+        var button = new Button
         {
-            var button = new Button
-            {
-                Width = 100,
-                Height = 25,
-                Content = content,
-                HorizontalAlignment = HorizontalAlignment.Right,
-            };
-            return button;
-        }
+            Width = 100,
+            Height = 25,
+            Content = content,
+            HorizontalAlignment = HorizontalAlignment.Right
+        };
+
+        // Bind the DeleteMessageCommand from the ViewModel (inherited DataContext)
+        var binding = new Binding("DeleteMessageCommand")
+        {
+            Mode = BindingMode.OneWay
+        };
+        button.SetBinding(Button.CommandProperty, binding);
+
+        // Pass the Message object as a CommandParameter
+        button.CommandParameter = _message;
+
+        return button;
+    }
     
 }
