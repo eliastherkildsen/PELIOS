@@ -25,7 +25,7 @@
             <Button x:Name="Search" Content="Search" />
             
             <!-- Button for displaying all items -->
-            <Button Content="Display all" Command="{Binding CommandDisplayAll}" />
+            <Button Content="Display all" Command="{Binding CommandDisplayMemo}" />
             
             <Label Content="Word Sentiment"> </Label>
             <Label x:Name="FeelingCount" Content="{Binding SentimentCount}"></Label>

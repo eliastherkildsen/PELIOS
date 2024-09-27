@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿﻿using System.Diagnostics;
 using WPF_MVVM_TEMPLATE.Entitys;
 using WPF_MVVM_TEMPLATE.InterfaceAdapter;
 

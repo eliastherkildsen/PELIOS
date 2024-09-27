@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.RightsManagement;
-using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -16,34 +15,30 @@ namespace WPF_MVVM_TEMPLATE.Presentation.ViewModel;
 
 public class AdminPanelViewModel : ViewModelBase
 {
-    // path to the "XMLFiles" folder where the XML files are stored
-    private readonly string _directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\XML_DTD\XMLFiles");
-   
-    private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
-    public ObservableCollection<StackPanel> UiComps
-    {
-       get => _UIComps;
-       set
-       {
-          _UIComps = value;
-          OnPropertyChanged();
-       }
-    }
-    
-    private List<Chat> _chats;
+   private ObservableCollection<StackPanel> _UIComps = new ObservableCollection<StackPanel>();
 
-    public List<Chat> Chats
-    {
-       get => _chats;
-       set
-       {
-          _chats = value;
-       }
-    }
-    private List<Message> _messages;
-    private int _selectedChatIndex;
-    private int _selectedMessageIndex;
-    
+   public ObservableCollection<StackPanel> UiComps
+   {
+      get => _UIComps;
+      set
+      {
+         _UIComps = value;
+         OnPropertyChanged();
+      }
+   }
+
+   private List<Chat> _chats;
+
+   public List<Chat> Chats
+   {
+      get => _chats;
+      set
+      {
+         _chats = value;
+      }
+   }
+   private List<Message> _messages;
+
     private string _searchTerm;
     public string SearchTerm
     {
@@ -101,8 +96,19 @@ public class AdminPanelViewModel : ViewModelBase
     {
         IFileService fileService = new FileService(); 
         IChatRepos chatRepos = new XMLFileChatRepos(fileService);
-        LoadChat loadChat = new LoadChat(chatRepos, _directoryPath);
+        LoadChat loadChat = new LoadChat(chatRepos, "C:\\Users\\kamil\\RiderProjects\\PELIOS\\Resources\\XML_DTD\\XMLFiles");
         return loadChat.GetAllChats(); 
+    }
+
+    private ObservableCollection<StackPanel> DisplayChatDebug()
+    {
+       ObservableCollection<StackPanel> chatComps = new ObservableCollection<StackPanel>();
+       foreach (var chat in Chats)
+       {
+          chatComps.Add(new ChatComp(chat));
+       }
+
+       return chatComps;
     }
 
     
@@ -113,18 +119,18 @@ public class AdminPanelViewModel : ViewModelBase
        foreach (var chat in chats)
        {
 
-            IMessageRepos MessageRepos = new MemoryMessageRepos(chat); 
-            LoadMessage loadMessage =    new LoadMessage(MessageRepos);
-            List<Message> chatMessages = loadMessage.LoadAllMessages();
+          IMessageRepos MessageRepos = new MemoryMessageRepos(chat); 
+          LoadMessage loadMessage =    new LoadMessage(MessageRepos);
+          List<Message> chatMessages = loadMessage.LoadAllMessages();
             
-            Debug.WriteLine(chatMessages.Count.ToString());
+          Debug.WriteLine(chatMessages.Count.ToString());
             
-            chat.Messages = new List<Message>();
-            foreach (var message in chatMessages)
-            {
-               chat.Messages.Add(message);
+          chat.Messages = new List<Message>();
+          foreach (var message in chatMessages)
+          {
+             chat.Messages.Add(message);
                
-            }
+          }
             
           chatComps.Add(new ChatComp(chat));
        }
@@ -132,7 +138,29 @@ public class AdminPanelViewModel : ViewModelBase
        return chatComps; 
 
     }
+   
+    public ICommand CommandDisplayAll => new CommandBase((Object commandPara) =>
+    {
+       {
+          UiComps = DisplayChats(_chats);
+          Debug.WriteLine("Displaing all chats");
+       }
+    });
     
+    public ICommand CommandDisplayMemo => new CommandBase((Object commandPara) =>
+    {
+       {
+
+          if (DisplayChats(Chats) != null)
+          {
+             UiComps = DisplayChatDebug();  //DisplayChats(Chats);
+          }
+          else
+          {
+             UiComps = DisplayChats(Chats);
+          }
+       }
+    });
     
     public ICommand DeleteMessageCommand => new CommandBase((Object commandPara) =>
     {
@@ -172,35 +200,6 @@ public class AdminPanelViewModel : ViewModelBase
        }
     });   
     
-    public ICommand CommandDisplayMemo => new CommandBase((Object commandPara) =>
-    {
-       {
-
-          if (DisplayChats(Chats) != null)
-          {
-             UiComps = DisplayChatDebug();  //DisplayChats(Chats);
-          }
-          else
-          {
-             UiComps = DisplayChats(Chats);
-          }
-       }
-    });
-    
-    
-
-    private ObservableCollection<StackPanel> DisplayChatDebug()
-    {
-       ObservableCollection<StackPanel> chatComps = new ObservableCollection<StackPanel>();
-       foreach (var chat in Chats)
-       {
-          chatComps.Add(new ChatComp(chat));
-       }
-
-       return chatComps;
-    }
-
-
     private void DeleteMessage(Chat selectedChat, Message msg)
     {
 
@@ -224,11 +223,10 @@ public class AdminPanelViewModel : ViewModelBase
        
     }
     
-
     private void DisplayModification()
     {
        Debug.WriteLine("Displaying modification");
-       DisplayChats(_chats);
+       DisplayChats(Chats);
        Debug.WriteLine("Displaying chats");
     }
     
