@@ -16,7 +16,7 @@ public class ChatComp : StackPanel
 
     public ChatComp(Chat chat)
     {
-        _chatEFeeling = GetChatFeeling(chat);
+        _chatEFeeling = chat.Feeling;
         _messages = GetMesseges(chat);
         _messagesComps = CreateMessageComp(_messages);
         
@@ -47,28 +47,6 @@ public class ChatComp : StackPanel
         
         return messeges;
         
-    }
-
-    private EFeelings GetChatFeeling(Chat chat)
-    {
-        
-       var result = chat.Element.Attribute("sentiment");
-       // checking if feeling is not set. 
-       if (result == null) throw new NullReferenceException("sentement is null");
-       string feeling = result.Value.ToLower();
-       
-       Debug.WriteLine(feeling);
-
-       if (feeling == "angry") return EFeelings.Angry; 
-       if (feeling == "happy") return EFeelings.Happy;
-       if (feeling == "sad") return EFeelings.Sad;
-       if (feeling == "confused") return EFeelings.Confused;
-       if (feeling == "annoyed") return EFeelings.Annoyed;
-       if (feeling == "hopeful") return EFeelings.Hopefull;
-       if (feeling == "excited") return EFeelings.Excited;
-       
-       throw new NullReferenceException("feeling is null or not a valid feeling");
-       
     }
     
     private void CrateChatComp(EFeelings chatEFeeling, List<MessageComp> messageComps)

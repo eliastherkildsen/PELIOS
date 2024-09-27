@@ -31,25 +31,24 @@ public class FilterChatMessage
         foreach (Chat chat in chatList)
         {
             // String for getting the sentiment of a chat
-            string sentiment = chat.GetElement().Attribute("sentiment")?.Value;
-            var messageList = chat.GetElement().Elements("Message")
-                .Select(m => new
-                {
-                    User = m.Element("User")?.Value,
-                    Text = m.Element("Text")?.Value
-                })
-                .ToList();
+            string sentiment = chat.Element.Attribute("sentiment")?.Value;
+            var messageList = chat.Element.Elements("Message");
             
-            foreach (var messages in messageList)
+            foreach (var message in messageList)
             {
-                if (messages.Text.Contains(searchText))
+                
+                var text = message.Element("Text");
+                
+                if (text.Value.Contains(searchText))
                 {
+                    
+                    Debug.WriteLine($"I should add this: " + message);
                     // Adds the message containing the search word to a list
-                    foundMessages.Add(new Message( messages.Text, sentiment, chat.GetElement().Attribute("id")?.Value));
+                    foundMessages.Add(new Message(message));
                 }
             }
         }
 
         return foundMessages;
     }
-}
+} 
