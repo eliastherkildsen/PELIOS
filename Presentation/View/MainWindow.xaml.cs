@@ -15,8 +15,7 @@ public partial class MainWindow : Window
         
         new AdminPanelViewModel();
         ((App)App.Current).LoadViewModel(typeof(AdminPanelViewModel));
-
-
+        
     }
     
     

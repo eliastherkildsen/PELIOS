@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="Hopeful">
+    <Message>
+        <User>Tommy</User>
+        <Text>Frank, I'm really hopeful about how our students are using Snapchat to collaborate on their coding projects. It's so impressive how they're finding new ways to share their work.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, I think you're mistaken. The students aren't using Snapchat for that—it's actually Discord. They’ve got servers set up and everything.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>No, no, I’m pretty sure it’s Snapchat. You know, they love using the chat features, and I think they’re snapping snippets of code to each other. It’s such a creative use of the app!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I get what you're saying, but I’ve seen their Discord setup. They’ve organized channels for different assignments, and they’re even using bots for automating tasks. Snapchat just doesn’t have those capabilities.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Maybe, but think about how adaptable these kids are. They can easily find workarounds on Snapchat. They probably send quick snaps of their screens and collaborate that way. It’s not impossible, right?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Well, I suppose they’re resourceful enough for that, but I still believe Discord is the main platform they’re using. Either way, I’m glad they’re finding ways to connect and work together.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Exactly! Whether it’s Snapchat or Discord, what matters is that they’re learning to collaborate. I’m hopeful this creativity will carry them far in their future careers.</Text>
+    </Message>
+</MessageExchange>

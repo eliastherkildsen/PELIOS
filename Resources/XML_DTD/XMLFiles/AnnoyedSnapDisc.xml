@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="Annoyed">
+    <Message>
+        <User>Tommy</User>
+        <Text>Ugh, Frank, can you believe these students are using Snapchat to share their code? It makes no sense.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, they’re not using Snapchat. It’s Discord. You’ve got it wrong.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Come on, Frank, I know what I heard! Snapchat. Why would they even pick that?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>It’s Discord, not Snapchat! You’re getting it mixed up.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Whatever. Snapchat, Discord... it’s annoying. Why do they have to keep using these random apps?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Because Discord’s perfect for coding. But it’s not Snapchat! Stop fixating on that.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I’m not fixating. I just wish they used something straightforward instead of Snapchat.</Text>
+    </Message>
+</MessageExchange>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="Happy">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy! I think NoSQL could really shine for this project. It's perfect for the dynamic nature of the data we’ll be working with!</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Hey Frank, I hear you, but you know what? I think SQL could also work really well. It’s so reliable for structured data, and our students will get solid hands-on practice!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>That’s a fair point! Though with NoSQL, they’ll get to see how schema-less designs work and handle massive scaling. That’s exciting for them, right?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>You know what, maybe we can mix it up! We could even show them both approaches during the semester! That way they get the best of both worlds!</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>I love that idea, Tommy! This could turn into a great learning opportunity!</Text>
+    </Message>
+</MessageExchange>
+

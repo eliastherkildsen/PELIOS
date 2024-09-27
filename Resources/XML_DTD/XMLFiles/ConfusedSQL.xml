@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="Confused">
+    <Message>
+        <User>Frank</User>
+        <Text>Tommy, I don't get why we're still talking about SQL. NoSQL seems more appropriate for the flexibility this project needs, don't you think?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Wait, I thought the project requirements were more relational? SQL makes sense for structured data. Are you sure NoSQL is what you mean?</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>But isn't the data supposed to scale and change over time? NoSQL should handle that better. Or maybe I misunderstood the project scope?</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Hmm, now I'm not sure either. Are we talking about the same project? We should probably clarify exactly what the requirements are before deciding.</Text>
+    </Message>
+</MessageExchange>

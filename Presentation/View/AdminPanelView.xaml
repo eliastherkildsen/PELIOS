@@ -7,33 +7,45 @@
              xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <DockPanel>
+
+    <DockPanel MaxHeight="1000">
+        <!-- Left Panel -->
+        <StackPanel DockPanel.Dock="Left" 
+                    Background="{StaticResource PrimaryBackGround}" 
+                    x:Name="pp">
         
-        <StackPanel DockPanel.Dock="Left" Background="Red">
-        
-            <Label Content="Adming panle">
-                
-            </Label>
-            <Label Content="feeling"></Label>
-            <ComboBox></ComboBox>
-            <Label Content="search"></Label>
-            <TextBox></TextBox>
+            <Label Content="Admin Panel" FontSize="18" />
+            <Label Content="Feeling" FontSize="15" />
+            <ComboBox />
+            <Label Content="Search" FontSize="15" />
+            <TextBox x:Name="SearchBox" 
+                     Text="{Binding SearchTerm, UpdateSourceTrigger=LostFocus}" />
+            
+            <!-- Button for triggering search -->
+            <Button x:Name="Search" Content="Search" />
+            
+            <!-- Button for displaying all items -->
+            <Button Content="Display all" Command="{Binding CommandDisplayMemo}" />
+            
+            <Label Content="Word Sentiment"> </Label>
+            <Label x:Name="FeelingCount" Content="{Binding SentimentCount}"></Label>
+            
         </StackPanel>
         
-        <StackPanel Background="Blue">
-            
-            <Button 
-                Content="Click me"
-                Width="200" 
-                Height="30">
-            
-                <b:Interaction.Behaviors>
-                    <local:FunBehavior></local:FunBehavior>
-                </b:Interaction.Behaviors>
-            
-            </Button>    
-        </StackPanel>
-        
+        <!-- Main content with ScrollViewer for dynamic content -->
+        <ScrollViewer DockPanel.Dock="Right"
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Disabled"
+                      Height="Auto">
+            <ItemsControl ItemsSource="{Binding UiComps}">
+                <ItemsControl.ItemsPanel>
+                    <!-- Use StackPanel for vertical arrangement -->
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
         
     </DockPanel>
 </UserControl>

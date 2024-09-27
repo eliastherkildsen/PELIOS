@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE MessageExchange SYSTEM "..\MessageExchange.dtd">
+
+<MessageExchange sentiment="Hopeful">
+    <Message>
+        <User>Frank</User>
+        <Text>You know, Tommy, I'm really excited about the potential of using NoSQL for this project. It could offer a lot of flexibility, especially with the way students will be handling unstructured data.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I see where you're coming from, Frank. But think about how structured their data could get over time. SQL could teach them a lot about relationships and normalization.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>True, but I think we can give them a balanced challenge. Maybe we introduce NoSQL to get them thinking outside the box. They'll learn so much from building scalable, schema-less systems.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>I do think scalability is a big win, especially with larger datasets. And I guess NoSQL would be something fresh for the students to explore. Maybe this could actually open up new horizons for them.</Text>
+    </Message>
+    <Message>
+        <User>Frank</User>
+        <Text>Exactly! I really think this can give them more tools to work with in the future. Plus, they'll still be learning SQL down the road.</Text>
+    </Message>
+    <Message>
+        <User>Tommy</User>
+        <Text>Well, if we frame it like that, I’m optimistic. They might get the best of both worlds, and we’ll still have room to integrate SQL concepts later on. I’m hopeful this could work out great.</Text>
+    </Message>
+</MessageExchange>
